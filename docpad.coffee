@@ -28,7 +28,7 @@ backgrounds =
 		description: "Clouds at 38k feet"
 	balcony:
 		image: "images/buckingham_balcony.jpg"
-backgroundSelection = 'balcony'
+backgroundSelection = 'blossom'
 
 # Spreadsheet
 spreadsheetConnection = null
