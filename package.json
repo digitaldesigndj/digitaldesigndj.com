@@ -26,7 +26,6 @@
 	},
 	"dependencies": {
 		"docpad": "6.x"
-		, "docpad-plugin-cachr": "2.x"
 		, "docpad-plugin-coffeekup": "2.x"
 		, "docpad-plugin-coffeescript": "2.x"
 		, "docpad-plugin-eco": "2.x"

@@ -4,14 +4,20 @@ layout: default
 
 # DigitalDesignDj
 
-<div style="float: left;">
+<div style="float: left; max-width: 60%">
 
-That's me!
+	<p>That's me!</p>
+
+	<p>Add me on Game Center: DigtialDesignDj</p>
+
+	<p>I like to make websites, espically with nice photos.</p>
 
 </div>
 
-<div style="width: 300px; float:right;">
+<div style="min-width: 180px; max-width: 30%; float:right;">
 	<a class="twitter-timeline" href="https://twitter.com/digitaldesigndj" data-widget-id="322085118040735745">Tweets by @digitaldesigndj</a>
 </div>
 
 <div style="clear:both"></div>
+
+

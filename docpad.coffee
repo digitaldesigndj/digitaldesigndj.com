@@ -21,12 +21,12 @@ twitConnection = new twit(
 # Background
 backgrounds =
 	blossom:
-		image: "http://digitaldesigndj.com/images/cherry_blossom.jpg"
+		image: "/images/cherry_blossom.jpg"
 		description: "Clouds at 38k feet"
 	sky:
-		image: "http://digitaldesigndj.com/images/toYYZ.jpg"
+		image: "/images/toYYZ.jpg"
 		description: "High Park Cherry Blossoms 2013, Toronto ON."
-backgroundSelection = 'sky'
+backgroundSelection = 'blossom'
 
 # Spreadsheet
 spreadsheetConnection = null
@@ -53,25 +53,24 @@ docpadConfig =
 		# Specify some site properties
 		site:
 			# The production url of our website
-			url: "http://startuphostel.org"
+			url: "http://digitaldesigndj.com"
 
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [
-				'www.startuphostel.com',
-				'startuphostel.herokuapp.com'
+				'djmux.com'
 			]
 
 			# The default title of our website
-			title: "Startup Hostel: The home in paradise for the doers of the world"
+			title: "DigitalDesignDj"
 
 			# The website description (for SEO)
 			description: """
-				Startup Hostel is an all year round work retreat for the doers of the world; you keep costs down low, work on what you want, learn from amazing people, in amazing locaitons.
+				You found me.
 				"""
 
 			# The website keywords (for SEO) separated by commas
 			keywords: """
-				startup, startups, hostel, hostels, hackathon, work retreat, retreat, hackers, entreprenuers, coworking, incubator
+				Digtial Media, Digital Design, Digital Art, Disk Jockey, DJ, Code, Node, JavaScript
 				"""
 
 			# The website's styles
@@ -88,17 +87,16 @@ docpadConfig =
 				# 'http://raw.github.com/iamceege/tooltipster/2.1.3/js/jquery.tooltipster.min.js'
 				'/scripts/script.js'
 				'/vendor/tweets-widget.js'
-				'/vendor/google-analytics.js'
 			]
 
 			# Services
 			services:
-				facebookLikeButton:
-					applicationId: '266367676718271'
-				twitterTweetButton: 'StartupHostel'
-				twitterFollowButton: 'StartupHostel'
-				gauges: '51427e6f108d7b293d0000d4'
-				googleAnalytics: 'UA-35505181-3'
+				# facebookLikeButton:
+				# 	applicationId: '266367676718271'
+				# twitterTweetButton: 'StartupHostel'
+				# twitterFollowButton: 'StartupHostel'
+				# gauges: '51427e6f108d7b293d0000d4'
+				googleAnalytics: 'UA-18710277-1'
 
 
 		# -----------------------------

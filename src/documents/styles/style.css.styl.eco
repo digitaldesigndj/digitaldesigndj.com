@@ -132,7 +132,7 @@ html.ios
 
 
 html
-	background: url("<%-@cachr @background%>?embed") no-repeat center center fixed
+	background: url("<%-@background%>?embed") no-repeat center center fixed
 	background-size: cover
 
 <% for user in @users.filter((u) -> u.avatar): %>
