@@ -22,11 +22,13 @@ twitConnection = new twit(
 backgrounds =
 	blossom:
 		image: "/images/cherry_blossom.jpg"
-		description: "Clouds at 38k feet"
+		description: "High Park Cherry Blossoms 2013, Toronto ON."
 	sky:
 		image: "/images/toYYZ.jpg"
-		description: "High Park Cherry Blossoms 2013, Toronto ON."
-backgroundSelection = 'blossom'
+		description: "Clouds at 38k feet"
+	balcony:
+		image: "images/buckingham_balcony.jpg"
+backgroundSelection = 'balcony'
 
 # Spreadsheet
 spreadsheetConnection = null
