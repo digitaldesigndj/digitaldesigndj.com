@@ -1,0 +1,141 @@
+// Imports
+@import 'nib'
+
+
+colorLink = blue
+colorLinkHover = blue
+
+*
+	box-sizing: border-box
+
+.addthis_floating_style
+	left: 10px !important
+	box-sizing: content-box
+
+article
+	z-index: 52
+	margin: 3em auto
+	width: 70%
+	padding: 3%
+	background: rgba(255,255,255,<%-@opacity or '0.5'%>)
+	border: 1px solid black
+
+.subscribe-button-inner
+	margin-bottom: -5px !important
+
+.twitter-follow-button
+	display: inline-block
+	height: 1em
+
+.social-buttons
+	.social-button
+		display: inline-block
+		width: 100px
+		text-align: left
+		overflow: hidden
+		&.google-plus-one-button
+		&.hacker-news-submit-button
+			width: 80px
+		&.twitter-follow-button
+			width: 170px
+			height: auto
+		&.reddit-submit-button
+			width: 140px
+			iframe
+				padding-top: 3px
+
+// Links
+a,a:link,a:visited
+	cursor: pointer
+	color: colorLink
+	text-decoration: underline
+a:hover
+	color: colorLinkHover !important
+
+// Clear
+.clear
+	clearfix()
+
+// People
+.people
+	&
+	*
+		margin: 0
+		padding: 0
+		border: none
+
+	&
+	.person
+		list-style: none
+
+	.person
+	.person-name
+	.person-link
+		display: block
+		height: 42px
+		width: 42px
+		text-indent: -99999px
+
+	.person
+		float: left
+		margin: 2px
+		position: relative
+
+	.person-name
+	.perosn-link
+		position: absolute
+		top: 0
+		left: 0
+
+	.person-link
+		text-decoration: none
+		&:hover
+			.person-name
+				z-index: 500
+				box-shadow: 0 0 5px #555
+
+	.person-name
+		overflow: hidden
+		background-size: 42px 42px !important
+		transition: all 0.2s ease-out
+
+@media screen and (max-width: 850px)
+	article
+		width: 600px
+
+@media screen and (max-width: 640px)
+	article
+		margin-top: 1em
+		width: 95%
+
+@media screen and (max-width: 960px)
+	.addthis_floating_style
+		display: none
+
+
+html.ios
+	&
+		background: white
+	article
+		margin-top: 1em
+		width: 95%
+	.ios-background
+		position: fixed
+		top: 0
+		left: 0
+		width: 200%
+		display: block !important
+		z-index: 49
+	.wrapper
+		z-index: 50
+		position: relative
+
+
+html
+	background: url("<%-@cachr @background%>?embed") no-repeat center center fixed
+	background-size: cover
+
+<% for user in @users.filter((u) -> u.avatar): %>
+.person-<%-user.hash%> .person-name
+	background: url("<%=@cachr user.avatar%>?embed") top left no-repeat
+<% end %>
