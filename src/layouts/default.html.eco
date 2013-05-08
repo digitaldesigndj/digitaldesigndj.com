@@ -34,7 +34,14 @@
 	<div class="wrapper">
 		<header></header>
 		<article id="content">
-			<%- @content %>
+			<h1><%= @document.title %></h1>
+			<div style="float: left; max-width: 60%">
+				<%- @content %>
+			</div>
+			<div style="min-width: 180px; max-width: 30%; float:right;">
+				<a class="twitter-timeline" href="https://twitter.com/digitaldesigndj" data-widget-id="322085118040735745">Tweets by @digitaldesigndj</a>
+			</div>
+			<div style="clear:both"></div>
 		</article>
 		<footer></footer>
 	</div>
