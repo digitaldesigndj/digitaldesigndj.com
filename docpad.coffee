@@ -4,9 +4,9 @@ feedr = new (require('feedr')).Feedr
 createsend = require('createsend')
 createsendConnection = new createsend(process.env.CM_KEY)
 
-growl = require('growl')
-growl('You have mail!')
-growl('5 new messages', { sticky: true })
+# growl = require('growl')
+# growl('You have mail!')
+# growl('5 new messages', { sticky: true })
 
 ###
 twit = require('twit')
@@ -21,12 +21,12 @@ twitConnection = new twit(
 # Background
 backgrounds =
 	blossom:
-		image: "http://localhost:9778/images/cherry_blossom.jpg"
+		image: "http://digitaldesigndj.com/images/cherry_blossom.jpg"
 		description: "Clouds at 38k feet"
 	sky:
-		image: "http://localhost:9778/images/toYYZ.jpg"
+		image: "http://digitaldesigndj.com/images/toYYZ.jpg"
 		description: "High Park Cherry Blossoms 2013, Toronto ON."
-backgroundSelection = 'blossom'
+backgroundSelection = 'sky'
 
 # Spreadsheet
 spreadsheetConnection = null
