@@ -2,9 +2,13 @@
 
 echo "Hello, $USER!"
 
-echo "Updating"
+echo "Getting latest changes from git"
 
 git pull
+
+echo "Installing Packages"
+
+npm install
 
 echo "Building Site"
 
