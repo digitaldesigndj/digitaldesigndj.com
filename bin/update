@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Hello, $USER!"
+
+echo "Updating"
+
+git pull
+
+echo "Building Site"
+
+docpad generate --env static
+
+echo "All done"
