@@ -1,8 +1,7 @@
 ---
 layout: default
+title: Docpad and NodeJS
 ---
-
-# Docpad and NodeJS
 
 ## Why?
 
