@@ -81,6 +81,7 @@ docpadConfig =
 				'/vendor/normalize.css'
 				'/vendor/h5bp.css'
 				'/styles/style.css'
+				'http://fonts.googleapis.com/css?family=Droid+Sans:400,700'
 			]
 
 			# The website's scripts
@@ -89,6 +90,7 @@ docpadConfig =
 				# 'http://raw.github.com/iamceege/tooltipster/2.1.3/js/jquery.tooltipster.min.js'
 				'/scripts/script.js'
 				'/vendor/tweets-widget.js'
+				'/vendor/google-plus.js'
 			]
 
 			# Services

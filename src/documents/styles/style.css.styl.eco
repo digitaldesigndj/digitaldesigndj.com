@@ -134,6 +134,9 @@ html.ios
 html
 	background: url("<%-@background%>?embed") no-repeat center center fixed
 	background-size: cover
+	font-family: 'Droid Sans', sans-serif;
+	text-shadow: 1px 1px white;
+	font-weight: bold;
 
 <% for user in @users.filter((u) -> u.avatar): %>
 .person-<%-user.hash%> .person-name
