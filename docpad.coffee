@@ -97,7 +97,8 @@ docpadConfig =
 				'/vendor/tweets-widget.js'
 				'/vendor/google-plus.js'
 				'/vendor/handlebars.js'
-				'/scripts/lastfm.js'
+				'/lastfm-widget-template.js'
+				'/scripts/lastfm-widget.js'
 			]
 
 			# Services
