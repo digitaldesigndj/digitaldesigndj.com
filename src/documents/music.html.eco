@@ -1,0 +1,16 @@
+---
+layout: default
+Title: Client Side Last FM Recently played
+---
+
+<div class="lastfm"></div>
+
+<script id="lastfm-template" type="text/x-handlebars-template">
+	<h3>{{title}}</h3>
+	<!-- <p>{{description}}</p> -->
+	<ul>
+	{{#each entries}}
+		<li>{{title}}</li>
+	{{/each}}
+	</ul>
+</script>

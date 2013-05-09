@@ -1,47 +1,49 @@
 {
-	"name": "digitaldesigndj.docpad"
-	, "version": "0.1.0"
-	, "private": true
-	, "description": "DigitalDesignDj.com Built with DocPad"
-	, "homepage": "https://digitaldesigndj.com"
-	, "keywords": [
-		"digitaldesigndj"
-		, "docpad"
-		, "website"
-	]
-	, "author": "Taylor Young <taylordyoung@gmail.com> (http://digitaldesigndj.com)"
-	, "maintainers": [
-		"Taylor Young <taylordyoung@gmail.com> (http://digitaldesigndj.com)"
-	]
-	, "contributors": [
-		"Taylor Young <taylordyoung@gmail.com> (http://digitaldesigndj.com)"
-	]
-	, "repository" : {
-		"type" : "git",
-		"url" : "https://DigitalDesignDj@bitbucket.org/DigitalDesignDj/digitaldesigndj.com.git"
-	}
-	, "engines" : {
-		"node": "0.10",
-		"npm": "1.2"
-	}
-	, "dependencies": {
-		"docpad": "6.x"
-		, "docpad-plugin-coffeekup": "2.x"
-		, "docpad-plugin-coffeescript": "2.x"
-		, "docpad-plugin-eco": "2.x"
-		, "docpad-plugin-marked": "*"
-		, "docpad-plugin-partials": "2.x"
-		, "docpad-plugin-services": "2.x"
-		, "docpad-plugin-stylus": "2.x"
-		, "docpad-plugin-text": "2.x"
-		, "createsend": "git://github.com/logicalparadox/createsend.git"
-		, "feedr": "~2.4.3"
-		, "bal-util": "~1.16.11"
-		, "google-spreadsheet": "~0.2.0"
-		, "enhance-css": "~0.6.0"
-	}
-	, "devDependencies": {
-		"docpad-plugin-livereload": "2.x"
-	}
-	, "main": "node_modules/docpad/bin/docpad-server"
+  "name": "digitaldesigndj.docpad"
+  , "version": "0.1.0"
+  , "private": true
+  , "description": "DigitalDesignDj.com Built with DocPad"
+  , "homepage": "https://digitaldesigndj.com"
+  , "keywords": [
+    "digitaldesigndj"
+    , "docpad"
+    , "website"
+  ]
+  , "author": "Taylor Young <taylordyoung@gmail.com> (http://digitaldesigndj.com)"
+  , "maintainers": [
+    "Taylor Young <taylordyoung@gmail.com> (http://digitaldesigndj.com)"
+  ]
+  , "contributors": [
+    "Taylor Young <taylordyoung@gmail.com> (http://digitaldesigndj.com)"
+  ]
+  , "repository": {
+    "type": "git"
+    , "url": "https://DigitalDesignDj@bitbucket.org/DigitalDesignDj/digitaldesigndj.com.git"
+  }
+  , "engines": {
+    "node": "0.10"
+    , "npm": "1.2"
+  }
+  , "dependencies": {
+    "docpad": "6.x"
+    , "docpad-plugin-coffeekup": "2.x"
+    , "docpad-plugin-coffeescript": "2.x"
+    , "docpad-plugin-eco": "2.x"
+    , "docpad-plugin-marked": "*"
+    , "docpad-plugin-partials": "2.x"
+    , "docpad-plugin-services": "2.x"
+    , "docpad-plugin-stylus": "2.x"
+    , "docpad-plugin-text": "2.x"
+    , "docpad-plugin-handlebars": "1.x"
+    , "createsend": "git://github.com/logicalparadox/createsend.git"
+    , "feedr": "~2.4.3"
+    , "bal-util": "~1.16.11"
+    , "google-spreadsheet": "~0.2.0"
+    , "enhance-css": "~0.6.0"
+    , "docpad-plugin-handlebars": "~2.2.1"
+  }
+  , "devDependencies": {
+    "docpad-plugin-livereload": "2.x"
+  }
+  , "main": "node_modules/docpad/bin/docpad-server"
 }
