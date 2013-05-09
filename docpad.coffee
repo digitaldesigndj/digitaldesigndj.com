@@ -91,6 +91,7 @@ docpadConfig =
 			# The website's scripts
 			scripts: [
 				# 'http://code.jquery.com/jquery-1.9.1.min.js'
+				'//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'
 				# 'http://raw.github.com/iamceege/tooltipster/2.1.3/js/jquery.tooltipster.min.js'
 				'/scripts/script.js'
 				'/vendor/tweets-widget.js'
