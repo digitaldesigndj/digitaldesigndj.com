@@ -1,5 +1,6 @@
-var username = 'DigitalDesignDj';
 $(function(){
+	var username = 'DigitalDesignDj';
+	var interval_seconds = 15;
 	setInterval(function widget() {
 		var salt = new Date().getTime();
 		if( $('.lastfm').length !== 0 ) {
@@ -24,5 +25,5 @@ $(function(){
 			});
 		}
 		return widget;
-	}(), 1000 * 15 );
+	}(), 1000 * interval_seconds );
 });
