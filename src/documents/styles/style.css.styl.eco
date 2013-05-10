@@ -130,6 +130,18 @@ html.ios
 		z-index: 50
 		position: relative
 
+.widget
+	border: 1px solid white
+	background: rgba(255,255,255,0.6)
+	padding: 10px 20px
+	margin: 20px 0
+	font-size: 12px
+	p
+		font-size: 16px
+	ul
+		list-style: none
+		padding-left: 15px
+		li
 
 html
 	background: url("<%-@background%>?embed") no-repeat center center fixed
