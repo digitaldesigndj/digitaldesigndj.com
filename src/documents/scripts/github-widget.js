@@ -8,7 +8,7 @@
 // long ago the date represents.
 function prettyDate(time){
 	var date = new Date((time || "").replace(/-/g,"/").replace(/[TZ]/g," ")),
-		diff = (((new Date()).getTime() - date.getTime()) / 1000),
+		diff = ( ( ( new Date() ).getTime() - date.getTime() ) / 1000 ) - 7200,
 		day_diff = Math.floor(diff / 86400);
 			
 	if ( isNaN(day_diff) || day_diff < 0 || day_diff >= 31 )
@@ -25,46 +25,36 @@ function prettyDate(time){
 		day_diff < 31 && Math.ceil( day_diff / 7 ) + " weeks ago";
 }
 
-// If jQuery is included in the page, adds a jQuery plugin to handle it as well
-if ( typeof jQuery != "undefined" )
-	jQuery.fn.prettyDate = function(){
-		return this.each(function(){
-			var date = prettyDate(this.title);
-			if ( date )
-				jQuery(this).text( date );
-		});
-	};
-
 /*
  * Github Widget
  */
 $(function(){
 	var username = 'DigitalDesignDj';
 	var reponame = 'digitaldesigndj.com';
-	var interval_seconds = 15;
+	var interval_seconds = 10;
+	function parseRSS( url, callback ) {
+		$.ajax({
+			url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent( url )
+			, dataType: 'json'
+			, success: function( data ) {
+				if( data.responseData ) {
+					callback(data.responseData.feed);
+				}else{
+					console.log( data );
+				}
+			}
+		});
+	}
 	setInterval(function widget() {
 		var salt = new Date().getTime();
 		if( $('.lastfm').length !== 0 ) {
 			var template = Handlebars.templates['github-widget-template'];
 			// http://stackoverflow.com/questions/226663/parse-rss-with-jquery
-			function parseRSS( url, callback ) {
-				$.ajax({
-					url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent( url )
-					, dataType: 'json'
-					, success: function( data ) {
-						if( data.responseData ) {
-							callback(data.responseData.feed);
-						}else{
-							console.log( data );
-						}
-					}
-				});
-			}
-			// ?nocache=' + salt
-			parseRSS('https://github.com/' + encodeURIComponent( username ) + '/' + encodeURIComponent( reponame ) + '/commits/master.atom' , function( data ){
+			parseRSS('https://github.com/' + encodeURIComponent( username ) + '/' + encodeURIComponent( reponame ) + '/commits/master.atom?nocache=' + salt , function( data ){
 				console.log( data );
 				$.each( data.entries, function( i, v ){
-					data.entries[i].publishedDate = prettyDate( v.publishedDate );
+					console.log( v.publishedDate.replace( ' -0700', ' -0500' ) );
+					data.entries[i].publishedDate = prettyDate( v.publishedDate.replace( ' -0700', ' -0500' ) );
 				});
 				$('.github-commits').html( template(data) );
 			});

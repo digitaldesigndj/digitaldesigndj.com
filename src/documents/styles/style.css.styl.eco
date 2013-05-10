@@ -144,7 +144,7 @@ html.ios
 		li
 			padding-bottom: 5px
 
-.github-widget
+.github-commits
 	span
 		font-size: 10px
 		font-weight: normal
