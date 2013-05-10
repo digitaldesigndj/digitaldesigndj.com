@@ -32,6 +32,9 @@ $(function(){
 	var username = 'DigitalDesignDj';
 	var reponame = 'digitaldesigndj.com';
 	var interval_seconds = 10;
+	var loaded = false;
+	// http://stackoverflow.com/questions/226663/parse-rss-with-jquer
+	// Uses Google Feeds API
 	function parseRSS( url, callback ) {
 		$.ajax({
 			url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent( url )
@@ -46,17 +49,21 @@ $(function(){
 		});
 	}
 	setInterval(function widget() {
+		var widget = $('.github-commits');
 		var salt = new Date().getTime();
-		if( $('.lastfm').length !== 0 ) {
+		if( widget.length ) {
 			var template = Handlebars.templates['github-widget-template'];
-			// http://stackoverflow.com/questions/226663/parse-rss-with-jquery
 			parseRSS('https://github.com/' + encodeURIComponent( username ) + '/' + encodeURIComponent( reponame ) + '/commits/master.atom?nocache=' + salt , function( data ){
-				console.log( data );
+				// console.log( data );
+				if ( !loaded ) {
+					widget.addClass( 'widget' );
+					loaded = true;
+				}
+				// Replace ISO Date Time with PrettyDates
 				$.each( data.entries, function( i, v ){
-					console.log( v.publishedDate.replace( ' -0700', ' -0500' ) );
 					data.entries[i].publishedDate = prettyDate( v.publishedDate.replace( ' -0700', ' -0500' ) );
 				});
-				$('.github-commits').html( template(data) );
+				widget.html( template(data) );
 			});
 		}
 		return widget;
