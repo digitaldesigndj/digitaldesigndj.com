@@ -15,4 +15,6 @@ Game Center: DigtialDesignDj
 
 <!-- [My Music Listening Habits](http://www.mymusichabits.com/visualize/DigitalDesignDj) -->
 
-<div class="lastfm"></div>
+<div class="widget lastfm"></div>
+
+<div class="widget github-commits"></div>

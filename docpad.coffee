@@ -109,6 +109,8 @@ docpadConfig =
 				'/vendor/handlebars.runtime.js'
 				'/lastfm-widget-template.js'
 				'/scripts/lastfm-widget.js'
+				'/github-widget-template.js'
+				'/scripts/github-widget.js'
 			]
 
 			# Services
