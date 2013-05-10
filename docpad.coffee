@@ -47,6 +47,16 @@ docpadConfig =
 
 	regenerateEvery: 1000*60*30  # 30 minutes
 
+	# =================================
+	# Plugins Config
+
+	# plugins:
+	# 	repocloner:
+	# 		repos: [
+	# 			name: 'digitaldesigndj.com'
+	# 			path: 'test'
+	# 			url: 'https://github.com/digitaldesigndj/digitaldesigndj.com.git'
+	# 		]
 
 	# =================================
 	# Template Data
