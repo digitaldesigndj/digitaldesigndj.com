@@ -43,11 +43,11 @@
 				<a class="twitter-timeline" href="https://twitter.com/digitaldesigndj" data-widget-id="322085118040735745">Tweets by @digitaldesigndj</a>
 			</div>
 			<div style="height: 200px;">&nbsp;</div>
-			<div class="g-plus" data-href="//plus.google.com/113427596471813784835" data-rel="author"></div>
+			<!-- <div class="g-plus" data-href="//plus.google.com/113427596471813784835" data-rel="author"></div> -->
 			<div style="clear:both"></div>
-			<p>Follow the development of this site on github</p>
+<!-- 			<p>Follow the development of this site on github</p>
 			<iframe src="http://tylerlh.github.com/github-latest-commits-widget/?username=digitaldesigndj&amp;repo=digitaldesigndj.com&amp;limit=10"
-  allowtransparency="true" frameborder="0" scrolling="no" width="500px" height="252px"></iframe>
+  allowtransparency="true" frameborder="0" scrolling="no" width="500px" height="252px"></iframe> -->
 		</article>
 		<footer></footer>
 	</div>
