@@ -32,9 +32,9 @@ $(function(){
 	var username = 'DigitalDesignDj';
 	var reponame = 'digitaldesigndj.com';
 	var interval_seconds = 10;
-	var loaded = false;
 	// http://stackoverflow.com/questions/226663/parse-rss-with-jquer
 	// Uses Google Feeds API
+	$('.github-commits').hide();
 	function parseRSS( url, callback ) {
 		$.ajax({
 			url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent( url )
@@ -55,15 +55,16 @@ $(function(){
 			var template = Handlebars.templates['github-widget-template'];
 			parseRSS('https://github.com/' + encodeURIComponent( username ) + '/' + encodeURIComponent( reponame ) + '/commits/master.atom?nocache=' + salt , function( data ){
 				// console.log( data );
-				if ( !loaded ) {
-					widget.addClass( 'widget' );
-					loaded = true;
-				}
 				// Replace ISO Date Time with PrettyDates
 				$.each( data.entries, function( i, v ){
 					data.entries[i].publishedDate = prettyDate( v.publishedDate.replace( ' -0700', ' -0500' ) );
 				});
 				widget.html( template(data) );
+				var the_height = widget.css('height', 'auto').height();
+				widget.height('0px');
+				widget.fadeIn('normal', function() {
+					widget.animate({height: the_height + 20}, 1500);
+				});
 			});
 		}
 		return widget;

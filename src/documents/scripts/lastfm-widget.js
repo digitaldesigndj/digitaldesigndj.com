@@ -1,7 +1,7 @@
 $(function(){
 	var username = 'DigitalDesignDj';
-	var interval_seconds = 5;
-	var widget = $('.lastfm');
+	var interval_seconds = 10;
+	var widget = $('.lastfm').hide();
 	var loaded = false;
 	setInterval( function() {
 		var salt = new Date().getTime();
@@ -15,10 +15,6 @@ $(function(){
 					, success: function( data ) {
 						if( data.responseData ) {
 							callback(data.responseData.feed);
-							if ( !loaded ) {
-								widget.addClass( 'widget' );
-								loaded = true;
-							}
 							// console.log( data );
 						}else{
 							console.log( data );
@@ -29,9 +25,16 @@ $(function(){
 			parseRSS('http://ws.audioscrobbler.com/2.0/user/' + encodeURIComponent( username ) + '/recenttracks.rss?nocache=' + salt , function( data ){
 				// console.log( data );
 				widget.html( template(data) );
+				if ( !loaded ) {
+					var the_height = widget.css('height', 'auto').height();
+					widget.height('0px');
+					widget.fadeIn('normal', function() {
+						widget.animate({height: the_height + 20}, 1500);
+					});
+					loaded = true;
+				}
 			});
 		}
 		return widget;
 	}, 1000 * interval_seconds );
-	
 });
