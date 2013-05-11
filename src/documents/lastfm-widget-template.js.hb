@@ -3,6 +3,6 @@
 <p>The last 10 songs I have listened to on Spotify:</p>
 <ul>
 {{#each entries}}
-	<li>{{title}}</li>
+	<li>{{title}}<br/><span>{{publishedDate}}</span></li>
 {{/each}}
 </ul>
