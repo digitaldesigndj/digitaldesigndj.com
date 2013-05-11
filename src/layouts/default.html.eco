@@ -32,6 +32,8 @@
 
 	<img class="ios-background" src="<%-@background%>" style="display:none;" />
 
+<div id="broadcast">Broadcast Connection Established...</div>
+
 	<div class="wrapper">
 		<header></header>
 		<article id="content">
