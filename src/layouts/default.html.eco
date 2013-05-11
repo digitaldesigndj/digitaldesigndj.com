@@ -42,14 +42,11 @@
 				<%- @content %>
 			</div>
 			<div style="min-width: 180px; max-width: 30%; float:right;">
-				<a class="twitter-timeline" href="https://twitter.com/digitaldesigndj" data-widget-id="322085118040735745">Tweets by @digitaldesigndj</a>
+				<p><a href="http://stackoverflow.com/users/529698/digitaldesigndj"><img src="http://stackoverflow.com/users/flair/529698.png" width="208" height="58" alt="profile for DigitalDesignDj at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for DigitalDesignDj at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a></p>
+				<p><a class="twitter-timeline" href="https://twitter.com/digitaldesigndj" data-widget-id="322085118040735745">Tweets by @digitaldesigndj</a></p>
 			</div>
 			<div style="height: 200px;">&nbsp;</div>
-			<!-- <div class="g-plus" data-href="//plus.google.com/113427596471813784835" data-rel="author"></div> -->
 			<div style="clear:both"></div>
-<!-- 			<p>Follow the development of this site on github</p>
-			<iframe src="http://tylerlh.github.com/github-latest-commits-widget/?username=digitaldesigndj&amp;repo=digitaldesigndj.com&amp;limit=10"
-  allowtransparency="true" frameborder="0" scrolling="no" width="500px" height="252px"></iframe> -->
 		</article>
 		<footer></footer>
 	</div>

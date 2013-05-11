@@ -144,10 +144,8 @@ html.ios
 	ul
 		list-style: none
 		padding-left: 15px
-		li
-			padding-bottom: 5px
-
-.github-commits
+	li
+		padding-bottom: 5px
 	span
 		font-size: 10px
 		font-weight: normal
