@@ -57,7 +57,7 @@ $(function(){
 				// console.log( data );
 				// Replace ISO Date Time with PrettyDates
 				$.each( data.entries, function( i, v ){
-					data.entries[i].publishedDate = prettyDate( v.publishedDate.replace( ' -0700', ' -0500' ) );
+					data.entries[i].publishedDate = prettyDate( v.publishedDate );
 				});
 				widget.html( template(data) );
 				var the_height = widget.css('height', 'auto').height();
