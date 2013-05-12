@@ -34,7 +34,9 @@ backgrounds =
 		image: "http://placebear.com/1200/800"
 	houston:
 		image: "/images/houston.jpg"
-backgroundSelection = 'houston'
+	gulf:
+		image: "/images/galveston_beach.jpg"
+backgroundSelection = 'gulf'
 
 # Spreadsheet
 spreadsheetConnection = null
