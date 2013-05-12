@@ -6,7 +6,7 @@ $(function(){
 	});
 	var livesocket = io.connect('http://digitaldesigndj.com/', {resource:'api/socket.io'});
 	livesocket.on('news', function (data) {
-		 console.log(data);
+		// console.log(data);
 		$('#broadcast').text(data.messageFromControl);
 	});
 });
