@@ -4,9 +4,9 @@ $(function(){
 		// console.log(data);
 		$('#broadcast').text(data.messageFromControl);
 	});
-	var livesocket = io.connect('http://digitaldesigndj:8880');
+	var livesocket = io.connect('http://digitaldesigndj.com/', {resource:'api/socket.io'});
 	livesocket.on('news', function (data) {
-		// console.log(data);
+		 console.log(data);
 		$('#broadcast').text(data.messageFromControl);
 	});
 });
