@@ -32,7 +32,9 @@ backgrounds =
 		image: "/images/horseshoe_falls.jpg"
 	bear:
 		image: "http://placebear.com/1200/800"
-backgroundSelection = 'balcony'
+	houston:
+		image: "/images/houston.jpg"
+backgroundSelection = 'houston'
 
 # Spreadsheet
 spreadsheetConnection = null
