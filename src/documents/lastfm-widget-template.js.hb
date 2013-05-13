@@ -1,8 +1,11 @@
-{{! <h3>{{title}}</h3>
-{{! <p>{{description}}</p>
 <p>The last 10 songs I have listened to on Spotify:</p>
 <ul>
-{{#each entries}}
-	<li>{{title}}<br/><span>{{publishedDate}}</span></li>
+{{#each recenttracks.track}}
+	<li>
+	<a href="{{url}}"><img src="{{image.0.[#text]}}" width="34" height="34" style="float: left;" /></a>
+	<div style="margin: 0 0 0 40px;">
+		{{name}}<br/>
+		<span>{{album.[#text]}} - {{artist.[#text]}}</span></li>
+	</div>
 {{/each}}
 </ul>
