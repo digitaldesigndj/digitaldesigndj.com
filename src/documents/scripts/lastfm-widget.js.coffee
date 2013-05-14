@@ -1,6 +1,6 @@
 $ ->
 	username         = "DigitalDesignDj"
-	lastfm_api_key   = 'c7b66efb5c186x9ed420b3275da989fab'
+	lastfm_api_key   = 'c7b66efb5c1869ed420b3275da989fab'
 	widget           = $(".lastfm")
 	lastfm = ->
 		if widget.length
