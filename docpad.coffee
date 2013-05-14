@@ -38,6 +38,12 @@ backgrounds =
 		image: "/images/galveston_beach.jpg"
 	lake_skyline:
 		image: "/images/toronto_island_skyline.jpg"
+	park:
+		image: "/images/high_park_cherry_blossoms.jpg"
+	toronto_sunset:
+		image: "/images/toronto_sunset.jpg"
+	toronto_waterline:
+		image: "/images/toronto_waterline.jpg"
 backgroundSelection = 'lake_skyline'
 
 # Spreadsheet
