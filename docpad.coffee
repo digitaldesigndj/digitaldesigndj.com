@@ -44,7 +44,7 @@ backgrounds =
 		image: "/images/toronto_sunset.jpg"
 	toronto_waterline:
 		image: "/images/toronto_waterline.jpg"
-backgroundSelection = 'lake_skyline'
+backgroundSelection = 'toronto_waterline'
 
 # Spreadsheet
 spreadsheetConnection = null
