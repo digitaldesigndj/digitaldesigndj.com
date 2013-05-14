@@ -36,7 +36,9 @@ backgrounds =
 		image: "/images/houston.jpg"
 	gulf:
 		image: "/images/galveston_beach.jpg"
-backgroundSelection = 'gulf'
+	lake_skyline:
+		image: "/images/toronto_island_skyline.jpg"
+backgroundSelection = 'lake_skyline'
 
 # Spreadsheet
 spreadsheetConnection = null
