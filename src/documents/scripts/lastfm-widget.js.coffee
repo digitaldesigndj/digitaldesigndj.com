@@ -1,8 +1,7 @@
 $ ->
 	username         = "DigitalDesignDj"
-	interval_seconds = 10
+	lastfm_api_key   = 'c7b66efb5c186x9ed420b3275da989fab'
 	widget           = $(".lastfm")
-	lastfm_api_key   = 'c7b66efb5c1869ed420b3275da989fab'
 	lastfm = ->
 		if widget.length
 			template = Handlebars.templates["lastfm-widget-template"]
@@ -15,5 +14,4 @@ $ ->
 						widget.html template(data)
 					else
 						console.log data
-			setInterval lastfm, 1000 * interval_seconds
 	do lastfm
