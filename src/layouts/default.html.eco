@@ -13,7 +13,7 @@
 	<title><%= @getPreparedTitle() %></title>
 	<meta name="description" content="<%= @getPreparedDescription() %>" />
 	<meta name="keywords" content="<%= @getPreparedKeywords() %>" />
-	<meta name="viewport" content="width=900" />
+	<meta name="viewport" content="width=800" />
 
 	<!-- DocPad Meta -->
 	<%- @getBlock('meta').toHTML() %>
@@ -36,21 +36,23 @@
 	<div class="wrapper">
 		<header></header>
 		<article id="content">
+
 			<h1 class='title'><%= @document.title %></h1>
-			<div style="float: left; max-width: 60%">
-				<%- @content %>
-			</div>
-			<div style="min-width: 180px; max-width: 30%; float:right;">
 
-				<p><iframe src="http://githubbadge.appspot.com/badge/DigitalDesignDj?a=0" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder=0></iframe></p>
+			<%- @content %>
 
-				<p><a href="http://stackoverflow.com/users/529698/digitaldesigndj"><img src="http://stackoverflow.com/users/flair/529698.png" width="208" height="58" alt="profile for DigitalDesignDj at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for DigitalDesignDj at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a></p>
+			<div class="widget lastfm"></div>
 
-				<p><a class="twitter-timeline" href="https://twitter.com/digitaldesigndj" data-widget-id="322085118040735745">Tweets by @digitaldesigndj</a></p>
+			<p><a class="twitter-timeline" href="https://twitter.com/digitaldesigndj" data-widget-id="322085118040735745">Tweets by @digitaldesigndj</a></p>
 
-			</div>
-			<div style="height: 200px;">&nbsp;</div>
+			<div class="widget github-commits"></div>
+
+			<p><a href="http://stackoverflow.com/users/529698/digitaldesigndj"><img src="http://stackoverflow.com/users/flair/529698.png" width="208" height="58" alt="profile for DigitalDesignDj at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for DigitalDesignDj at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a></p>
+
+			<iframe src="http://githubbadge.appspot.com/badge/DigitalDesignDj?a=0" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder=0></iframe>
+
 			<div style="clear:both"></div>
+
 		</article>
 		<footer></footer>
 	</div>

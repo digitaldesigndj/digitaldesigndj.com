@@ -14,9 +14,9 @@ colorLinkHover = blue
 
 article
 	z-index: 52
-	margin: 3em auto
-	width: 70%
-	padding: 3%
+	margin: 28px auto
+	width: 480px
+	padding: 24px 48px;
 	background: rgba(255,255,255,<%-@opacity or '0.5'%>)
 	border: 1px solid black
 
@@ -99,36 +99,33 @@ a:hover
 		background-size: 42px 42px !important
 		transition: all 0.2s ease-out
 
-@media screen and (max-width: 850px)
+@media screen and (max-width: 480px)
 	article
-		width: 600px
-
-@media screen and (max-width: 640px)
-	article
-		margin-top: 1em
 		width: 95%
-
-@media screen and (max-width: 960px)
-	.addthis_floating_style
-		display: none
+		padding: 12px 24px
 
 
 html.ios
 	&
 		background: white
-	article
-		margin-top: 1em
-		width: 95%
 	.ios-background
 		position: fixed
 		top: 0
 		left: 0
-		width: 200%
 		display: block !important
 		z-index: 49
+
 	.wrapper
 		z-index: 50
 		position: relative
+
+@media all and (orientation:portrait)
+	.ios-background
+		height: 980px
+
+@media all and (orientation:landscape)
+	.ios-background
+		width: 800px
 
 .widget
 	border-top: 1px solid white
