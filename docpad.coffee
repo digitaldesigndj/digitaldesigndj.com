@@ -119,6 +119,7 @@ docpadConfig =
 				'/scripts/socket.js'
 				'/socket.io/socket.io.js'
 				'/vendor/tweets-widget.js'
+				'/vendor/typekit.js'
 				# '/vendor/google-plus.js'
 				'/vendor/handlebars.runtime.js'
 				'/lastfm-widget-template.js'
