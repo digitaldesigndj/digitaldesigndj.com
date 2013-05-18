@@ -2,8 +2,8 @@
 @import 'nib'
 
 
-colorLink = blue
-colorLinkHover = blue
+colorLink = #222
+colorLinkHover = #0cf
 
 *
 	box-sizing: border-box
@@ -51,6 +51,8 @@ a,a:link,a:visited
 	text-decoration: underline
 a:hover
 	color: colorLinkHover !important
+	text-shadow: 1px 1px black;
+
 
 // Clear
 .clear
