@@ -1,9 +1,5 @@
 # Import
 balUtil = require('bal-util')
-feedr = new (require('feedr')).Feedr
-createsend = require('createsend')
-createsendConnection = new createsend(process.env.CM_KEY)
-
 # growl = require('growl')
 # growl('You have mail!')
 # growl('5 new messages', { sticky: true })
@@ -48,10 +44,6 @@ backgrounds =
 		image: "/images/long_exposure_orbit.jpg"
 backgroundSelection = 'long_exposure_orbit'
 
-# Spreadsheet
-spreadsheetConnection = null
-spreadsheetInfo = null
-spreadsheetRows = null
 
 # DocPad Configuration
 docpadConfig =
@@ -59,7 +51,7 @@ docpadConfig =
 	# =================================
 	# Standard Configuration
 
-	regenerateEvery: 1000*60*30  # 30 minutes
+	# regenerateEvery: 1000*60*30  # 30 minutes
 
 	# =================================
 	# Plugins Config
@@ -171,183 +163,6 @@ docpadConfig =
 	# Here we can define handlers for events that DocPad fires
 	# You can find a full listing of events on the DocPad Wiki
 	events:
-
-		# Extend Template Data
-		# Prepare our spreadsheet
-		extendTemplateData: (opts,next) ->
-			# Prepare
-			docpad = @docpad
-			tasks = new balUtil.Group(next)
-			users = []
-			sales = 0
-
-			# Find User or Create
-			addUser = (newUser) ->
-				for user in users
-					checks = ['name','email','skype','twitter','facebook','website']
-					for check in checks
-						if user[check] and user[check] is newUser[check]
-							for own key,value of newUser
-								user[key] or= value or null
-							return user
-				users.push(newUser)
-				return newUser
-
-			# Spreadsheet Connection
-			tasks.push (next) ->
-				return next()  if spreadsheetConnection? or !(process.env.GOOGLE_SPREADSHEET_KEY and process.env.GOOGLE_USERNAME and process.env.GOOGLE_PASSWORD)
-				spreadsheetConnection = new (require('google-spreadsheet'))(process.env.GOOGLE_SPREADSHEET_KEY)
-				return spreadsheetConnection.setAuth(process.env.GOOGLE_USERNAME, process.env.GOOGLE_PASSWORD, next)
-
-			# Spreadsheet Info
-			tasks.push (next) ->
-				return next()  if spreadsheetInfo? or !(spreadsheetConnection)
-				spreadsheetConnection.getInfo (err,info) ->
-					return next(err)  if err
-					spreadsheetInfo = info
-					return next()
-
-			# Spreadsheet Rows
-			tasks.push (next) ->
-				return next() if spreadsheetRows? or !(spreadsheetInfo)
-				spreadsheetInfo.worksheets[0].getRows (err,rows) ->
-					return next(err)  if err
-					spreadsheetRows = rows
-					return next()
-
-			# Speadsheet Users
-			tasks.push ->
-				return  if !(spreadsheetRows)
-				for row in spreadsheetRows
-					# Apply user information
-					user = {}
-					user.name = row.name or row.title or row.twitterusername or row.skypeusername or null
-					user.email = row.email or null
-					user.bio = row.bio or null
-					user.confirmed = String(row.confirmed).toLowerCase() in ['yes','true']
-					user.skype = row.skypeusername or null
-					user.twitter = row.twitterusername or null
-					user.facebook = (row.facebookurl or '').replace(/^.+com\//,'').replace(/\//g,'') or null
-					user.website = row.websiteurl or null
-					addUser(user)
-
-			# Campaign Monitor Users
-			tasks.push (next) ->
-				return next()  if !(process.env.CM_LIST_ID)
-				createsendConnection.listActive process.env.CM_LIST_ID, null, (err,data) ->
-					return next(err)  if err
-					for result in data.Results
-						# Apply user information
-						user = {}
-						user.name = result.Name or null
-						user.email = result.EmailAddress
-						user.skype = null
-						user.twitter = null
-						for customField in result.CustomFields
-							customFieldKey = customField.Key.toLowerCase()
-							user[customFieldKey] or= customField.Value or null
-						addUser(user)
-					return next()
-
-			# Twitter Users
-			tasks.push (next) ->
-				feedr.readFeed "http://api.twitter.com/1/statuses/followers.json?screen_name=StartupHostel&cursor=-1", (err,data) ->
-					return next(err)  if err
-					return next(data.errors[0].message)  if data?.errors?[0]?.message
-
-					# Users
-					for twitterUser in (data.users or [])
-						# Apply user information
-						user = {}
-						user.name = twitterUser.name
-						user.bio = twitterUser.description or null
-						user.twitter = twitterUser.screen_name
-						user.twitterID = twitterUser.id
-						user.website = twitterUser.url or "http://twitter.com/#{twitterUser.screen_name}"
-						user.avatar = twitterUser.profile_image_url or null
-						addUser(user)
-
-					# Done
-					return next()
-
-			# Facebook Users
-			# https://neosmart-stream.de/facebook/how-to-create-a-facebook-access-token/
-			tasks.push (next) ->
-				return next()  if !(process.env.FACEBOOK_GROUP_ID and process.env.FACEBOOK_ACCESS_TOKEN)
-				facebookGroupId = process.env.FACEBOOK_GROUP_ID
-				facebookAccessToken = process.env.FACEBOOK_ACCESS_TOKEN
-				facebookFields = "about address bio email accounts gender name id religion username".replace(/\s/g,'%2C')
-				feedr.readFeed "https://graph.facebook.com/#{facebookGroupId}/members?fields=#{facebookFields}&method=GET&format=json&callback=cb&access_token=#{facebookAccessToken}", (err,data) ->
-					return next(err)  if err
-
-					# Users
-					for facebookUser in data.data
-						# Apply user information
-						user = {}
-						user.name = facebookUser.name or null
-						user.bio = facebookUser.bio or null
-						user.gender = facebookUser.gender or null
-						user.email = (facebookUser.email or '').replace('\u0040','@') or null
-						user.facebook = facebookUser.username
-						user.facebookID = facebookUser.id
-						addUser(user)
-
-					# Done
-					return next()
-
-			# Normalize Fields
-			tasks.push (next) ->
-				# Prepare
-				userTasks = new balUtil.Group (err) ->
-					return next(err)  if err
-					docpad.log 'info', "Fetched #{users.length} users"
-					opts.templateData.sales = sales
-					opts.templateData.users = users
-					return next()
-
-				# Users
-				balUtil.each users, (user,index) ->  userTasks.push (next) ->
-					# Basics
-					user = users[index]
-					user.text or= user.name + (if user.bio then ": #{user.bio}" else '')
-					user.website or= (if user.twitter then "http://twitter.com/#{user.twitter}") or (if user.facebook then "https://www.facebook.com/#{user.facebook}") or null
-					user.avatar or= null
-					user.hash = require('crypto').createHash('md5').update(user.email or user.name or index).digest("hex")
-
-					# Sales
-					sales++  if user.confirmed
-
-					# Avatar
-					avatarTasks = new balUtil.Group(next)
-
-					# Avatar: Facebook
-					avatarTasks.push (next) ->
-						return next()  if user.avatar or !user.facebook
-						user.avatar or= "http://graph.facebook.com/#{user.facebook}/picture"
-						return next()
-
-					# Avatar: Twitter
-					avatarTasks.push (next) ->
-						return next()  if user.avatar or !user.twitter
-						feedr.readFeed "http://api.twitter.com/1/users/lookup.json?screen_name=#{user.twitter}", (err,twitterUser) ->
-							return next(err)  if err
-							user.avatar or= twitterUser.profile_image_url or null
-							return next()
-
-					# Avatar: Email
-					avatarTasks.push (next) ->
-						return next()  if user.avatar or !user.email
-						user.avatar or= "http://www.gravatar.com/avatar/#{user.hash}.jpg"
-						return next()
-
-					# Avatar: run
-					avatarTasks.run('sync')
-
-				# Run
-				userTasks.run()
-
-			# Run
-			return tasks.run('sync')
 
 		# Generate After
 		generateAfter: (opts,next) ->

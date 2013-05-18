@@ -153,8 +153,3 @@ html
 	font-family: 'museo-sans', 'Droid Sans', sans-serif;
 	text-shadow: 1px 1px white;
 	font-weight: bold;
-
-<% for user in @users.filter((u) -> u.avatar): %>
-.person-<%-user.hash%> .person-name
-	background: url("<%=@cachr user.avatar%>?embed") top left no-repeat
-<% end %>

@@ -41,15 +41,7 @@
 
 			<%- @content %>
 
-			<div class="widget lastfm"></div>
-
-			<p><a class="twitter-timeline" href="https://twitter.com/digitaldesigndj" data-widget-id="322085118040735745">Tweets by @digitaldesigndj</a></p>
-
-			<div class="widget github-commits"></div>
-
-			<p><a href="http://stackoverflow.com/users/529698/digitaldesigndj"><img src="http://stackoverflow.com/users/flair/529698.png" width="208" height="58" alt="profile for DigitalDesignDj at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for DigitalDesignDj at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a></p>
-
-			<iframe src="http://githubbadge.appspot.com/badge/DigitalDesignDj?a=0" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder=0></iframe>
+			<div class="widget lastfm latest"></div>
 
 			<div style="clear:both"></div>
 
