@@ -44,7 +44,9 @@ backgrounds =
 		image: "/images/toronto_sunset.jpg"
 	toronto_waterline:
 		image: "/images/toronto_waterline.jpg"
-backgroundSelection = 'park'
+	long_exposure_orbit:
+		image: "/images/long_exposure_orbit.jpg"
+backgroundSelection = 'long_exposure_orbit'
 
 # Spreadsheet
 spreadsheetConnection = null
