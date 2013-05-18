@@ -100,26 +100,29 @@ docpadConfig =
 				# 'http://raw.github.com/iamceege/tooltipster/2.1.3/css/tooltipster.css'
 				'/vendor/normalize.css'
 				'/vendor/h5bp.css'
-				'/styles/style.css'
+				'/css/style.css'
 				'http://fonts.googleapis.com/css?family=Droid+Sans:400,700'
 			]
 
 			# The website's scripts
 			scripts: [
-				# 'http://code.jquery.com/jquery-1.9.1.min.js'
+				# 'http://code.jquery.com/jquery-2.0.0.min.js'
 				'//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'
 				# 'http://raw.github.com/iamceege/tooltipster/2.1.3/js/jquery.tooltipster.min.js'
-				'/scripts/script.js'
-				'/scripts/socket.js'
 				'/socket.io/socket.io.js'
+
 				'/vendor/tweets-widget.js'
 				'/vendor/typekit.js'
-				# '/vendor/google-plus.js'
 				'/vendor/handlebars.runtime.js'
-				'/lastfm-widget-template.js'
-				'/scripts/lastfm-widget.js'
-				'/github-widget-template.js'
-				'/scripts/github-widget.js'
+				# '/vendor/google-plus.js'
+
+				'/js/script.js'
+				'/js/github-widget.js'
+				'/js/lastfm-widget.js'
+				# '/js/socket.js'
+
+				'/hb/lastfm-widget-template.js'
+				'/hb/github-widget-template.js'
 			]
 
 			# Services
