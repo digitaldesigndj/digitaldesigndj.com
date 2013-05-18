@@ -34,7 +34,11 @@
 	<img class="ios-background" src="<%-@background%>" style="display:none;" />
 
 	<div class="wrapper">
-		<header></header>
+
+		<header>
+			<%-@partial('menu.html.eco',{menuItems: @generateMenu(@document.url)})%>
+		</header>
+
 		<article id="content">
 
 			<h1 class='title'><%= @document.title %></h1>

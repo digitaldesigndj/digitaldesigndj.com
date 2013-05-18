@@ -40,7 +40,8 @@
     "bal-util": "~1.16.11",
     "google-spreadsheet": "~0.2.0",
     "enhance-css": "~0.6.0",
-    "socket.io-client": "~0.9.11"
+    "socket.io-client": "~0.9.11",
+    "docpad-plugin-menu": "~1.0.2"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "2.x"
