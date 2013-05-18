@@ -2,7 +2,7 @@
 echo Upadating DigitalDesignDj.com on RasPi
 ssh pi@djmux.com <<'ENDSSH'
 cd digitaldesigndj.com/
-git pull
+git pull origin master
 docpad generate --env static
 echo never completes...
 ENDSSH
