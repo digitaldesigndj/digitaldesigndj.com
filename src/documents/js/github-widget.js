@@ -52,7 +52,6 @@ $(function(){
 		var widget = $('.github-commits');
 		var salt = new Date().getTime();
 		if( widget.length ) {
-			console.log(Handlebars.templates);
 			var template = Handlebars.templates['hb-github-recent'];
 			parseRSS('https://github.com/' + encodeURIComponent( username ) + '/' + encodeURIComponent( reponame ) + '/commits/master.atom?nocache=' + salt , function( data ){
 				// console.log( data );
