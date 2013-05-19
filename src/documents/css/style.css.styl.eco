@@ -13,14 +13,20 @@ colorLinkHover = #0cf
 	box-sizing: content-box
 
 nav
-	background: white
+	position: fixed
+	top: 0
+	width: 100%
+	background: #FFF
 	a
 		padding: 0 20px
-		border-right: 1px dotted black
+		border-right: 1px dotted #000
 		line-height: 20px
 	a:link
 		text-decoration: none
 		text-shadow: none
+
+body
+	padding-top: 20px;
 
 article
 	z-index: 52

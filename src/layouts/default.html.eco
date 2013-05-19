@@ -35,7 +35,6 @@
 
 	<nav>
 	<% for page in @getCollection("html").findAll({isPage:true}).toJSON(): %>
-		<% console.dir(page) %>
 		<a href="<%= page.url %>" <%= if page.id is @document.id then 'class="current"' %>><%= page.title %></a>
 	<% end %>
 	</nav>
