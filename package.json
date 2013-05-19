@@ -35,14 +35,11 @@
     "docpad-plugin-stylus": "2.x",
     "docpad-plugin-text": "2.x",
     "docpad-plugin-handlebars": "~2.2.1",
-    "createsend": "git://github.com/logicalparadox/createsend.git",
-    "feedr": "~2.4.3",
     "bal-util": "~1.16.11",
-    "google-spreadsheet": "~0.2.0",
-    "enhance-css": "~0.6.0",
     "socket.io-client": "~0.9.11",
     "backbone": "~1.0.0",
-    "query-engine": "~1.5.2"
+    "query-engine": "~1.5.2",
+    "underscore": "~1.4.4"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "2.x"
