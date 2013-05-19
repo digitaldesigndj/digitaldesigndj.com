@@ -2,6 +2,7 @@
 title: About
 layout: default
 isPage: true
+order: 2
 ---
 This site is hosted on a Raspberry Pi
 
