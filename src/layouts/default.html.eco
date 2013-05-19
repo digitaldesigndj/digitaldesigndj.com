@@ -35,9 +35,8 @@
 
 	<nav>
 	<% for page in @getCollection("html").findAll({isPage:true}).toJSON(): %>
-		<a href="<%= page.url %>" class="<%= if page.id is @document.id then 'current' %>">
-			<%= page.title %>
-		</a>
+		<% console.dir(page) %>
+		<a href="<%= page.url %>" <%= if page.id is @document.id then 'class="current"' %>><%= page.title %></a>
 	<% end %>
 	</nav>
 
@@ -49,9 +48,9 @@
 
 			<%- @content %>
 
-			<div class="widget lastfm current"></div>
+			<hr />
 
-			<a href="http://www.mymusichabits.com/visualize/DigitalDesignDj">My Music Listening Habits</a>
+			<div class="widget lastfm current"></div>
 
 			<div style="clear:both"></div>
 

@@ -24,4 +24,6 @@ This site is hosted on a Raspberry Pi
 APIs
 
 - Last FM (Scrobbling from Spotify)
-- 
+- Github
+
+I prefer Open Source Software
