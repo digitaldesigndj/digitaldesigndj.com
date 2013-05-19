@@ -10,7 +10,7 @@
 	{{/if}}
 	<div style="margin: 0 0 0 40px;">
 		{{name}}<br/>
-		<span>{{artist.[#text]}} - {{album.[#text]}}</span></li>
+		<span>{{artist.[#text]}} {{#if album.[#text]}} - {{album.[#text]}}{{/if}}</span></li>
 	</div>
 	{{#if [@attr].nowplaying}}
 		<br/>

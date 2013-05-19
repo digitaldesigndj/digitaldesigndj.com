@@ -53,7 +53,7 @@ $(function(){
 		var salt = new Date().getTime();
 		if( widget.length ) {
 			console.log(Handlebars.templates);
-			var template = Handlebars.templates['hb-github-widget-template.js'];
+			var template = Handlebars.templates['hb-github-recent'];
 			parseRSS('https://github.com/' + encodeURIComponent( username ) + '/' + encodeURIComponent( reponame ) + '/commits/master.atom?nocache=' + salt , function( data ){
 				// console.log( data );
 				// Replace ISO Date Time with PrettyDates

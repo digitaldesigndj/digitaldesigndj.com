@@ -114,8 +114,9 @@ docpadConfig =
 				'/vendor/handlebars.runtime.js'
 				# '/vendor/google-plus.js'
 
-				'/hb/lastfm-widget-template.js'
-				'/hb/github-widget-template.js'
+				'/hb/lastfm-current.js'
+				'/hb/lastfm-recent.js'
+				'/hb/github-recent.js'
 
 				# '/js/socket.js'
 				# '/socket.io/socket.io.js'

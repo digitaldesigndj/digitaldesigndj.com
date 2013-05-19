@@ -35,9 +35,7 @@
 
 	<div class="wrapper">
 
-		<header>
 			<%-@partial('menu.html.eco',{menuItems: @generateMenu(@document.url)})%>
-		</header>
 
 		<article id="content">
 
@@ -45,7 +43,9 @@
 
 			<%- @content %>
 
-			<div class="widget lastfm latest"></div>
+			<div class="widget lastfm current"></div>
+
+			<a href="http://www.mymusichabits.com/visualize/DigitalDesignDj">My Music Listening Habits</a>
 
 			<div style="clear:both"></div>
 
