@@ -33,9 +33,15 @@
 
 	<img class="ios-background" src="<%-@background%>" style="display:none;" />
 
-	<div class="wrapper">
+	<nav>
+	<% for page in @getCollection("html").findAll({isPage:true}).toJSON(): %>
+		<a href="<%= page.url %>" class="<%= if page.id is @document.id then 'current' %>">
+			<%= page.title %>
+		</a>
+	<% end %>
+	</nav>
 
-			<%-@partial('menu.html.eco',{menuItems: @generateMenu(@document.url)})%>
+	<div class="wrapper">
 
 		<article id="content">
 

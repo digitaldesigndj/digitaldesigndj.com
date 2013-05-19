@@ -1,8 +1,7 @@
 ---
 title: About
 layout: default
-tags: ['taylor','intro','page']
-pageOrder: 40
+isPage: true
 ---
 This site is hosted on a Raspberry Pi
 

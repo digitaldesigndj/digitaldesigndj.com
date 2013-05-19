@@ -1,6 +1,7 @@
 ---
 layout: home
-title: DigitalDesignDj
+title: Home
+isPage: true
 ---
 
 <p id="broadcast"></p>
