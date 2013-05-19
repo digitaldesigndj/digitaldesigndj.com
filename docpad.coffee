@@ -101,28 +101,27 @@ docpadConfig =
 				'/vendor/normalize.css'
 				'/vendor/h5bp.css'
 				'/css/style.css'
-				'http://fonts.googleapis.com/css?family=Droid+Sans:400,700'
 			]
 
 			# The website's scripts
 			scripts: [
-				# 'http://code.jquery.com/jquery-2.0.0.min.js'
-				'//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'
+				'//code.jquery.com/jquery-1.9.1.min.js'
+				# '//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'
 				# 'http://raw.github.com/iamceege/tooltipster/2.1.3/js/jquery.tooltipster.min.js'
-				'/socket.io/socket.io.js'
 
 				'/vendor/tweets-widget.js'
 				'/vendor/typekit.js'
 				'/vendor/handlebars.runtime.js'
 				# '/vendor/google-plus.js'
 
+				'/hb/lastfm-widget-template.js'
+				'/hb/github-widget-template.js'
+
+				# '/js/socket.js'
+				# '/socket.io/socket.io.js'
 				'/js/script.js'
 				'/js/github-widget.js'
 				'/js/lastfm-widget.js'
-				# '/js/socket.js'
-
-				'/hb/lastfm-widget-template.js'
-				'/hb/github-widget-template.js'
 			]
 
 			# Services
@@ -166,30 +165,6 @@ docpadConfig =
 	# Here we can define handlers for events that DocPad fires
 	# You can find a full listing of events on the DocPad Wiki
 	events:
-
-		# Generate After
-		generateAfter: (opts,next) ->
-			# Prepare
-			docpad = @docpad
-			config = docpad.getConfig()
-
-			# Fetch
-			stylesheet = docpad.getFileAtPath('styles/style')
-			source = stylesheet.get('contentRendered')
-
-			# Optimise
-			new (require('enhance-css'))(
-				rootPath: config.outPath
-			).process source, (err,data) ->
-				return next(err)  if err
-				result = data.embedded.plain
-				balUtil.writeFile stylesheet.get('outPath'), result, (err) ->
-					return next(err)  if err
-					stylesheet.set('contentRendered',result)
-					return next()
-
-			# Done
-			true
 
 		# Server Extend
 		# Used to add our own custom routes to the server before the docpad routes are added

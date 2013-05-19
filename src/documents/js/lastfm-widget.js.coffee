@@ -4,7 +4,7 @@ $ ->
 	widget           = $(".lastfm")
 	lastfm = ->
 		if widget.length
-			template = Handlebars.templates["lastfm-widget-template"]
+			template = Handlebars.templates['hb-lastfm-widget-template']
 			$.ajax
 				url: 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' + encodeURIComponent( username ) + '&api_key=' + encodeURIComponent( lastfm_api_key ) + '&format=json'
 				dataType: "json"

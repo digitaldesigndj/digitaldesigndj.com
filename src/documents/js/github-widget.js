@@ -52,7 +52,8 @@ $(function(){
 		var widget = $('.github-commits');
 		var salt = new Date().getTime();
 		if( widget.length ) {
-			var template = Handlebars.templates['github-widget-template'];
+			console.log(Handlebars.templates);
+			var template = Handlebars.templates['hb-github-widget-template.js'];
 			parseRSS('https://github.com/' + encodeURIComponent( username ) + '/' + encodeURIComponent( reponame ) + '/commits/master.atom?nocache=' + salt , function( data ){
 				// console.log( data );
 				// Replace ISO Date Time with PrettyDates
