@@ -1,8 +1,10 @@
 #!/bin/bash
-echo Upadating DigitalDesignDj.com on RasPi
+echo deploying digitaldesigndj.com to raspi
 ssh pi@djmux.com <<'ENDSSH'
 cd digitaldesigndj.com/
+echo getting latest commits
 git pull origin master
+echo re-generating site
 docpad generate --env static
-echo never completes...
+echo all done! ^_^
 ENDSSH
