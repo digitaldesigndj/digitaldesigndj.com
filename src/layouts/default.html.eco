@@ -40,24 +40,29 @@
 	</nav>
 
 	<div class="wrapper">
+		<div class="outer">
+			<article id="content">
 
-		<article id="content">
+				<h1 class='title'><%= @document.title %></h1>
 
-			<h1 class='title'><%= @document.title %></h1>
+				<%- @content %>
 
-			<%- @content %>
+				<hr />
 
-			<hr />
+				<% if @document.title isnt "Home": %>
 
-			<div class="widget lastfm current"></div>
+					<div class="widget lastfm current"></div>
 
-			<div style="clear:both"></div>
+				<% end %>
 
-		</article>
-		<footer></footer>
+				<div style="clear:both"></div>
+
+			</article>
+		</div>
 	</div>
 
 	<!-- DocPad Scripts + Our Own -->
 	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
+
 </body>
 </html>
