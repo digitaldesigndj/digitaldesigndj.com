@@ -1,4 +1,6 @@
-
+.wf-loading
+	color: transparent;
+	text-shadow: none;
 
 colorLink = #222
 colorLinkHover = #0cf

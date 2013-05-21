@@ -21,6 +21,8 @@
 	<!-- DocPad Styles + Our Own -->
 	<%- @getBlock('styles').add(@site.styles).toHTML() %>
 
+	<script>document.documentElement.className += ' wf-loading';</script>
+
 	<script data-main="js/app" src="js/lib/require.js"></script>
 
 	<!-- Icons -->
