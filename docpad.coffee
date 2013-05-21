@@ -55,6 +55,11 @@ docpadConfig =
 
 	# =================================
 	# Plugins Config
+	
+	# plugins:
+	# 	handlebars:
+	# 		precompileOpts:
+	# 			wrapper: "default"
 
 	# plugins:
 	# 	repocloner:
@@ -87,7 +92,7 @@ docpadConfig =
 
 			# The website description (for SEO)
 			description: """
-				You found me.
+				Hello, come on in.
 				"""
 
 			# The website keywords (for SEO) separated by commas
@@ -105,24 +110,24 @@ docpadConfig =
 
 			# The website's scripts
 			scripts: [
-				'//code.jquery.com/jquery-1.9.1.min.js'
+				# '//code.jquery.com/jquery-1.9.1.min.js'
 				# '//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'
 				# 'http://raw.github.com/iamceege/tooltipster/2.1.3/js/jquery.tooltipster.min.js'
 
 				'/vendor/tweets-widget.js'
-				'/vendor/typekit.js'
-				'/vendor/handlebars.runtime.js'
+				# '/vendor/typekit.js'
+				# '/vendor/handlebars.runtime.js'
 				# '/vendor/google-plus.js'
 
-				'/hb/lastfm-current.js'
-				'/hb/lastfm-recent.js'
-				'/hb/github-recent.js'
+				# '/hb/lastfm-current.js'
+				# '/hb/lastfm-recent.js'
+				# '/hb/github-recent.js'
 
 				# '/js/socket.js'
 				# '/socket.io/socket.io.js'
-				'/js/script.js'
-				'/js/github-widget.js'
-				'/js/lastfm-widget.js'
+				# '/js/script.js'
+				# '/js/github-widget.js'
+				# '/js/lastfm-widget.js'
 			]
 
 			# Services
