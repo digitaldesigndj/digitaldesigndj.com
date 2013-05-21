@@ -1,4 +1,4 @@
-define ['jquery', 'handlebars', 'hb/lastfm-recent', 'hb/lastfm-current'], ($, Handlebars) ->
+require ['jquery', 'handlebars', 'hb/lastfm-recent', 'hb/lastfm-current'], ($, Handlebars) ->
 	username         = 'DigitalDesignDj'
 	lastfm_api_key   = 'c7b66efb5c1869ed420b3275da989fab'
 	widgets          = $('.lastfm')

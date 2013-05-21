@@ -39,7 +39,8 @@
     "socket.io-client": "~0.9.11",
     "backbone": "~1.0.0",
     "query-engine": "~1.5.2",
-    "underscore": "~1.4.4"
+    "underscore": "~1.4.4",
+    "requirejs": "~2.1.6"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "2.x"

@@ -1,4 +1,4 @@
-define(['jquery', 'handlebars', 'hb/github-recent'], function ($, Handlebars) {
+require(['jquery', 'handlebars', 'hb/github-recent'], function ($, Handlebars) {
 
 	/*
 	 * JavaScript Pretty Date
