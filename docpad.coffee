@@ -56,10 +56,10 @@ docpadConfig =
 	# =================================
 	# Plugins Config
 	
-	# plugins:
-	# 	handlebars:
-	# 		precompileOpts:
-	# 			wrapper: "default"
+	plugins:
+		handlebars:
+			precompileOpts:
+				wrapper: "amd"
 
 	# plugins:
 	# 	repocloner:
