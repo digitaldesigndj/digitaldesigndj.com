@@ -23,8 +23,6 @@
 
 	<script>document.documentElement.className += ' wf-loading';</script>
 
-	<script data-main="js/app" src="js/lib/require.js"></script>
-
 	<!-- Icons -->
 	<link rel="shortcut icon" href="/icons/house.png" />
 
@@ -66,8 +64,8 @@
 		</div>
 	</div>
 
-	<!-- DocPad Scripts + Our Own -->
+	<!-- DocPad Scripts (For Live Reload) + Our Own (RequireJS) -->
 	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
-
+	<script data-main="js/app" src="js/lib/require.js"></script>
 </body>
 </html>
