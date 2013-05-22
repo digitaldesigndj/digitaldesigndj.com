@@ -8,6 +8,8 @@ This site is hosted on a Raspberry Pi
 
 ![RaspberryPi](/images/raspi.jpg)
 
+That's the server, where it's actually sitting right now, on my dresser. If the site is a little slow, its because my consumer internet connection will only let me squeeze out about 2 Mbps up. The server is also very simple, running an ARM chipset like you would find in a smartphone, but I beleive it's more than powerful enough to saturate the network connection before the hardware starts to hold things up.
+
 ### Technology
 
 #### Devlopment
@@ -41,6 +43,7 @@ This site is hosted on a Raspberry Pi
 - Express
 - Docpad
 - jQuery
+- Underscore
 
 #### Pre-Processers
 
@@ -55,14 +58,15 @@ This site is hosted on a Raspberry Pi
 
 #### Frontend
 
+- RequireJs (client-side async script loader)
 - TypeKit (Museo Sans)
 - Photoshop (backgrounds)
 
 #### Languages
+
+- JavaScript
 - HTML5
 - CSS3
-- JavaScript
-- JSON
 
 #### APIs
 
