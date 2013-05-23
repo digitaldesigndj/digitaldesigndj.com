@@ -36,7 +36,7 @@ define(['underscore', 'jquery', 'hbs!hb/github-recent'], function ( _, $, tmplRe
 	var url = 'https://api.github.com/repos/digitaldesigndj/digitaldesigndj.com/commits';
 	var interval_seconds = 10;
 
-	setInterval(function widget() {
+	function widget() {
 		var widget = $('.github-commits');
 		var salt = new Date().getTime();
 		if( widget.length ) {
@@ -55,9 +55,8 @@ define(['underscore', 'jquery', 'hbs!hb/github-recent'], function ( _, $, tmplRe
 					}
 				}
 			});
-			
 		}
-		return widget;
-	}(), 1000 * interval_seconds );
+	}
+	widget();
 
 });
