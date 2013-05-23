@@ -6,33 +6,33 @@ This site combines DocPad and RequireJs into what I like to call the **Double Bu
 
 Install NodeJs (This will install NPM too)
 
-  http://nodejs.org/install
+    [http://nodejs.org/install](http://nodejs.org/install)
   
 Install Docpad Globally
 
-  npm install docpad -g
+    npm install docpad -g
 
 Clone the repo
 
-  git clone
+    git clone
 
 install dependancies
 
-  npm install
+    npm install
   
 During development, I dont just the optimized JS. To fire up the dev server just do:
 
-  docpad run
+    docpad run
   
 ### Production Process
 
 build docpad
 
-  docpad generate --env static
+    docpad generate --env static
   
 optimized js
 
-  node r.js -o app.build.js
+    node r.js -o app.build.js
   
 This will render a flat site to the /out dir
 
