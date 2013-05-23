@@ -6,7 +6,7 @@ This site combines DocPad and RequireJs into what I like to call the **Double Bu
 
 Install NodeJs (This will install NPM too)
 
-    [http://nodejs.org/install](http://nodejs.org/install)
+* [http://nodejs.org/install](http://nodejs.org/install)
   
 Install Docpad Globally
 
@@ -34,5 +34,5 @@ optimized js
 
     node r.js -o app.build.js
   
-This will render a flat site to the /out dir
+This will render a flat site to the `/out` dir
 
