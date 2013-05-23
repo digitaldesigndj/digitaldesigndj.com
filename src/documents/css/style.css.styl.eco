@@ -177,7 +177,7 @@ html.ios
 		font-weight: normal
 
 html
-	background: url("<%-@background%>?embed") no-repeat center center fixed
+	background: url("<%-@background%>") no-repeat center center fixed
 	background-size: cover
 	font-family: 'museo-sans', 'Droid Sans', sans-serif;
 	text-shadow: 1px 1px white;

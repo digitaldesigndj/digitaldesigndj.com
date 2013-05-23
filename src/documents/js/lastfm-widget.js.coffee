@@ -1,4 +1,4 @@
-define ['jquery', 'handlebars', 'hb/lastfm-recent', 'hb/lastfm-current'], ($, Handlebars) ->
+define ['jquery', 'hbs!hb/lastfm-recent', 'hbs!hb/lastfm-current'], ($, tmplRecent, tmplCurrent) ->
 	username         = 'DigitalDesignDj'
 	lastfm_api_key   = 'c7b66efb5c1869ed420b3275da989fab'
 	widgets          = $('.lastfm')
@@ -7,9 +7,9 @@ define ['jquery', 'handlebars', 'hb/lastfm-recent', 'hb/lastfm-current'], ($, Ha
 			widget = $ v
 			if widget.length
 				if widget.hasClass 'current'
-					template = Handlebars.templates['js-hb-lastfm-current']
+					template = tmplCurrent
 				else
-					template = Handlebars.templates['js-hb-lastfm-recent']
+					template = tmplRecent
 				$.ajax
 					url: 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' + encodeURIComponent( username ) + '&api_key=' + encodeURIComponent( lastfm_api_key ) + '&format=json'
 					dataType: 'json'

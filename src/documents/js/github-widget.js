@@ -1,4 +1,4 @@
-define(['underscore', 'jquery', 'handlebars', 'hb/github-recent'], function ( _, $, Handlebars ) {
+define(['underscore', 'jquery', 'hbs!hb/github-recent'], function ( _, $, tmplRecent ) {
 
 	/*
 	 * JavaScript Pretty Date
@@ -40,18 +40,16 @@ define(['underscore', 'jquery', 'handlebars', 'hb/github-recent'], function ( _,
 		var widget = $('.github-commits');
 		var salt = new Date().getTime();
 		if( widget.length ) {
-			var template = Handlebars.templates['js-hb-github-recent'];
 			$.ajax({
 				url: url
 				, dataType: 'json'
 				, success: function( data ) {
 					if( data ) {
-						
 						// $.each( data, function( i, v ){
 						// 	console.log( v.commit );
 						// 	// data.entries[i].publishedDate = prettyDate( v.publishedDate );
 						// });
-						widget.html( template( _.first( data, 10 ) ) );
+						widget.html( tmplRecent( _.first( data, 10 ) ) );
 					}else{
 						console.log( data );
 					}

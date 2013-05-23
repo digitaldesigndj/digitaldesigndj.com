@@ -4,25 +4,29 @@
 	appDir: "stg/"
 	, baseUrl: "js/"
 	, dir: "out/"
-	//Comment out the optimize line if you want
-	//the code minified by UglifyJS
-	// , optimize: "none"
-
-	, paths : {
-		'app' : 'app'
-		, 'hb' : 'hb'
-		, 'handlebars'     : 'lib/handlebars_runtime'
-		, 'jquery'         : 'lib/jquery'
-		, 'underscore'     : 'lib/underscore'
-		, 'propertyParser' : 'plugin/propertyParser'
-		, 'font'           : 'plugin/font'
-	}
-
+	, optimize: "none"  //Comment out to uglify
 	, modules: [
-		//Optimize the application files. jQuery is not 
-		//included since it is already in require-jquery.js
 		{
 			name: "app"
 		}
 	]
+	// paths and shim are mirrored in app.js
+	, paths : {
+		'app' : 'app'
+		, 'hb' : 'hb'
+		, 'jquery'         : 'lib/jquery'
+		, 'underscore'     : 'lib/underscore'
+		, 'propertyParser' : 'plugin/propertyParser'
+		, 'font'           : 'plugin/font'
+		, 'hbs'            : 'plugin/hbs'
+	}
+	, shim : {
+		'jquery': {
+			'exports' : '$'
+		}
+		, 'underscore': {
+			'exports' : '_'
+		}
+	}
+	
 })

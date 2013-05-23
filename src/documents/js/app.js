@@ -1,14 +1,13 @@
 require.config({
 	baseUrl : 'js'
-	
 	, paths : {
 		'app' : 'app'
 		, 'hb' : 'hb'
-		, 'handlebars'     : 'lib/handlebars_runtime'
 		, 'jquery'         : 'lib/jquery'
 		, 'underscore'     : 'lib/underscore'
 		, 'propertyParser' : 'plugin/propertyParser'
 		, 'font'           : 'plugin/font'
+		, 'hbs'            : 'plugin/hbs'
 	}
 	, shim : {
 		'jquery': {
@@ -17,9 +16,10 @@ require.config({
 		, 'underscore': {
 			'exports' : '_'
 		}
-		, 'handlebars': {
-			'exports' : 'Handlebars'
-		}
+	}
+	, hbs: {
+		'disableI18n'      : true
+		, 'disableHelpers' : true
 	}
 });
 
