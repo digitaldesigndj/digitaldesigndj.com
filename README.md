@@ -20,7 +20,7 @@ install dependancies
 
     npm install
   
-During development, I dont just the optimized JS. To fire up the dev server just do:
+During development, we don't use the optimized JS. To fire up the dev server just do:
 
     docpad run
     
