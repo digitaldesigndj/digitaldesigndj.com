@@ -1,9 +1,9 @@
 //  node r.js -o app.build.js
 
 ({
-	appDir: "out/"
+	appDir: "stg/"
 	, baseUrl: "js/"
-	, dir: "prod/"
+	, dir: "out/"
 	//Comment out the optimize line if you want
 	//the code minified by UglifyJS
 	// , optimize: "none"

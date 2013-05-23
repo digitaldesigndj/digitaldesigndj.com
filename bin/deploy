@@ -6,5 +6,7 @@ echo getting latest commits
 git pull origin master
 echo re-generating site
 docpad generate --env static
+echo r.js optimizing site
+node r.js -o app.build.js
 echo all done! ^_^
 ENDSSH

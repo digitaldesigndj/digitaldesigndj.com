@@ -53,6 +53,9 @@ docpadConfig =
 
 	# regenerateEvery: 1000*60*30  # 30 minutes
 
+	# r.js optimizes stg/ in second build step and writes final site to out/
+	outPath: 'stg'
+
 	# =================================
 	# Plugins Config
 	
