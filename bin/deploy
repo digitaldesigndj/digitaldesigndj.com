@@ -1,12 +1,12 @@
 #!/bin/bash
-echo deploying digitaldesigndj.com to raspi
+echo __ deploying digitaldesigndj.com to raspi
 ssh pi@djmux.com <<'ENDSSH'
 cd digitaldesigndj.com/
-echo getting latest commits
+echo __ getting latest commits
 git pull origin master
-echo re-generating site
+echo __ re-generating site
 docpad generate --env static
-echo r.js optimizing site
+echo __ r.js optimizing site
 node r.js -o app.build.js
-echo all done! ^_^
+echo __ all done! ^_^
 ENDSSH
