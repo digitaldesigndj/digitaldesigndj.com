@@ -8,7 +8,7 @@ This site is hosted on a Raspberry Pi
 
 ![RaspberryPi](/images/raspi.jpg)
 
-That's the server, where it's actually sitting right now, on my dresser. If you can see this site, it's still plugged in.
+That's the server, where it's actually sitting right now, on my dresser. If you made it this far, it's still plugged in.
 
 <!-- If the site is a little slow, its because my consumer Internet connection will only let me squeeze out about 2 Mbps up. The server is also very simple, running an ARM chipset like you would find in a smartphone, but I beleive it's more than powerful enough to saturate the network connection before the hardware starts to hold things up. -->
 

@@ -11,4 +11,4 @@ order: 1
 
 The site is a bit heavy on development and light on the content at the moment. I have been using this site as a testing ground web development ideas.
 
-The site is optimized to run as quickly as possible. It may not seem super fast, but it is running on a small ARM server (Raspberry Pi) behind a low-grade consumner internet connection (2Mbps).
+<!-- The site is optimized to run as quickly as possible. It may not seem super fast, but it is running on a small ARM server (Raspberry Pi) behind a low-grade consumner internet connection (2Mbps). -->
