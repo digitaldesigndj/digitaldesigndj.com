@@ -14,7 +14,7 @@ Install Docpad Globally
 
 Clone the repo
 
-    git clone
+    git clone https://github.com/digitaldesigndj/digitaldesigndj.com
 
 install dependancies
 
@@ -23,6 +23,8 @@ install dependancies
 During development, I dont just the optimized JS. To fire up the dev server just do:
 
     docpad run
+    
+I successful you should have the dev site running at http://localhost:9887, the files being served are in `stg/`, the `src/` dir holds the source files before they are parsed by docpad. Do your editing in there.
   
 ### Production Process
 
@@ -30,7 +32,7 @@ build docpad
 
     docpad generate --env static
   
-optimized js
+optimize/compile JavaScript
 
     node r.js -o app.build.js
   
