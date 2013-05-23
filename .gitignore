@@ -2,3 +2,4 @@ out
 .AppleDouble
 node_modules
 *.env
+stg
