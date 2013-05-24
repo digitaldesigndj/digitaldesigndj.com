@@ -1,7 +1,9 @@
-define ['jquery', 'hbs!hb/lastfm-recent', 'hbs!hb/lastfm-current'], ($, tmplRecent, tmplCurrent) ->
+define ['jquery', 'socket-io', 'hbs!hb/lastfm-recent', 'hbs!hb/lastfm-current'], ($, io, tmplRecent, tmplCurrent) ->
 	username         = 'DigitalDesignDj'
 	lastfm_api_key   = 'c7b66efb5c1869ed420b3275da989fab'
 	widgets          = $('.lastfm')
+	socket           = io.connect 'http://digitaldesigndj.com/', {resource:'api/socket.io'}
+	console.log(socket);
 	lastfm = ->
 		$.each widgets, ( i, v ) ->
 			widget = $ v
@@ -10,13 +12,6 @@ define ['jquery', 'hbs!hb/lastfm-recent', 'hbs!hb/lastfm-current'], ($, tmplRece
 					template = tmplCurrent
 				else
 					template = tmplRecent
-				$.ajax
-					url: 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' + encodeURIComponent( username ) + '&api_key=' + encodeURIComponent( lastfm_api_key ) + '&format=json'
-					dataType: 'json'
-					success: (data) ->
-						if data
-							# console.log data
-							widget.html template(data)
-						else
-							console.log data
+				socket.on 'update', ( data ) ->
+					widget.html template( data )
 	do lastfm
