@@ -12,5 +12,6 @@ define ['jquery', 'socket-io', 'hbs!hb/lastfm-recent', 'hbs!hb/lastfm-current'],
 				else
 					template = tmplRecent
 				socket.of('/api').on 'update', ( data ) ->
+					console.log data
 					widget.html template( data )
 	do lastfm
