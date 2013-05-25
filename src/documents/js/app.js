@@ -16,6 +16,9 @@ require.config({
 		, 'underscore': {
 			'exports' : '_'
 		}
+		, 'socket-io': {
+			'exports' : 'io'
+		}
 	}
 	, hbs: {
 		'disableI18n'      : true
