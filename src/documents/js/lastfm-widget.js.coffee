@@ -3,7 +3,6 @@ define ['jquery', 'socket-io', 'hbs!hb/lastfm-recent', 'hbs!hb/lastfm-current'],
 	lastfm_api_key   = 'c7b66efb5c1869ed420b3275da989fab'
 	widgets          = $('.lastfm')
 	socket           = io.connect 'http://digitaldesigndj.com/', {resource:'api/socket.io'}
-	console.log(socket);
 	lastfm = ->
 		$.each widgets, ( i, v ) ->
 			widget = $ v
@@ -12,6 +11,6 @@ define ['jquery', 'socket-io', 'hbs!hb/lastfm-recent', 'hbs!hb/lastfm-current'],
 					template = tmplCurrent
 				else
 					template = tmplRecent
-				socket.on 'update', ( data ) ->
+				socket.of('/api').on 'update', ( data ) ->
 					widget.html template( data )
 	do lastfm
