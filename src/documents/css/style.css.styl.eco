@@ -169,7 +169,7 @@ html.ios
 		font-size: 16px
 	ul
 		list-style: none
-		padding-left: 15px
+		padding-left: 0
 	li
 		padding-bottom: 5px
 	span

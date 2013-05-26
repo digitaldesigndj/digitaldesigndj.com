@@ -1,19 +1,16 @@
-<p>The last 10 songs I have listened to on Spotify:</p>
+<p>Recent Listens:</p>
 <ul>
 {{#each recenttracks.track}}
-	{{#if [@attr].nowplaying}}
-		Now Playing:
-	{{/if}}
 	<li>
-	{{#if image.0.[#text]}}
-		<a href="{{url}}"><img src="{{image.0.[#text]}}" width="34" height="34" style="float: left;" /></a>
-	{{/if}}
-	<div style="margin: 0 0 0 40px;">
-		{{name}}<br/>
-		<span>{{artist.[#text]}} {{#if album.[#text]}} - {{album.[#text]}}{{/if}}</span></li>
-	</div>
-	{{#if [@attr].nowplaying}}
-		<br/>
-	{{/if}}
+		{{#unless [@attr].nowplaying}}
+			{{#if image.0.[#text]}}
+				<a href="{{url}}"><img src="{{image.0.[#text]}}" width="34" height="34" style="float: left;" /></a>
+			{{/if}}
+			<div style="margin: 0 0 0 40px;">
+				{{name}}<br/>
+				<span>{{artist.[#text]}} {{#if album.[#text]}} - {{album.[#text]}}{{/if}}</span></li>
+			</div>
+		{{/unless}}
+	</li>
 {{/each}}
 </ul>

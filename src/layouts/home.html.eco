@@ -4,6 +4,8 @@ layout: default
 
 <%- @content %>
 
+<div class="lastfm current"></div>
+
 <div class="lastfm"></div>
 
 <p><a class="twitter-timeline" href="https://twitter.com/digitaldesigndj" data-widget-id="322085118040735745">Tweets by @digitaldesigndj</a></p>

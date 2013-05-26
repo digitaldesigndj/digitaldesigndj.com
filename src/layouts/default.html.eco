@@ -54,7 +54,7 @@
 
 				<% if @document.title isnt "Home": %>
 
-					<div class="widget lastfm current"></div>
+					<div class="lastfm current"></div>
 
 				<% end %>
 

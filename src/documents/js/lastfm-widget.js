@@ -1,13 +1,12 @@
 define(['jquery', 'socket-io', 'hbs!hb/lastfm-recent', 'hbs!hb/lastfm-current'], function($, io, tmplRecent, tmplCurrent) {
 	function widget() {
-		var widgets = $( '.lastfm' )
-			, socket  = io.connect(
+		var socket = io.connect(
 				'http://digitaldesigndj.com:8880'
 				, { resource: 'api/socket.io' }
 			);
-		$.each(widgets, function( i, v ) {
-			var template, widget;
-			widget = $( v );
+		$.each( $( '.lastfm' ) , function( i, v ) {
+			var template
+				, widget = $( v );
 			if ( widget.length ) {
 				if ( widget.hasClass( 'current' ) ) {
 					template = tmplCurrent;
