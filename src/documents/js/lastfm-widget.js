@@ -1,8 +1,10 @@
 define(['jquery', 'socket-io', 'hbs!hb/lastfm-recent', 'hbs!hb/lastfm-current'], function($, io, tmplRecent, tmplCurrent) {
-	var widgets, socket, lastfm;
-	widgets        = $( '.lastfm' );
-	socket         = io.connect( 'http://digitaldesigndj.com:8880', { resource: 'api/socket.io' });
-	lastfm         = function() {
+	function widget() {
+		var widgets = $( '.lastfm' )
+			, socket  = io.connect(
+				'http://digitaldesigndj.com:8880'
+				, { resource: 'api/socket.io' }
+			);
 		$.each(widgets, function( i, v ) {
 			var template, widget;
 			widget = $( v );
@@ -21,5 +23,5 @@ define(['jquery', 'socket-io', 'hbs!hb/lastfm-recent', 'hbs!hb/lastfm-current'],
 			}
 		});
 	};
-	lastfm();
+	widget();
 });
