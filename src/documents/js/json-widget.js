@@ -1,5 +1,5 @@
 define(['underscore', 'jquery'], function ( _, $ ) {
-	return function json_widget( url, template, selector, success ) {
+	return function json_widget( selector, url, template ) {
 		var widget = $( selector );
 		if( widget.length ) {
 			$.ajax({
