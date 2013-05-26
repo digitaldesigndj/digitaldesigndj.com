@@ -31,7 +31,7 @@ define(['underscore', 'jquery', 'hbs!hb/github-recent'], function ( _, $, tmplRe
 	 * Github Widget
 	 */
 
-	function widget() {
+	return function widget() {
 		var username   = 'DigitalDesignDj'
 			, reponame = 'digitaldesigndj.com'
 			, url      = 'https://api.github.com/repos/' + username + '/' + reponame + '/commits'
@@ -52,6 +52,5 @@ define(['underscore', 'jquery', 'hbs!hb/github-recent'], function ( _, $, tmplRe
 			});
 		}
 	};
-	widget();
 
 });

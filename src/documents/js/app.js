@@ -10,7 +10,10 @@ require.config({
 		, 'hbs'            : 'plugin/hbs'
 	}
 	, shim : {
-		'jquery': {
+		'font' : {
+			deps: ['propertyParser']
+		}
+		, 'jquery': {
 			'exports' : '$'
 		}
 		, 'underscore': {
@@ -27,11 +30,6 @@ require.config({
 });
 
 define([
-	'propertyParser'
-	, 'font!typekit,id:czt2jur'
-	, 'underscore'
-	, 'jquery'
+	'font!typekit,id:czt2jur'
 	, 'main'
-	, 'github-widget'
-	, 'lastfm-widget'
 ]);
