@@ -8,17 +8,3 @@ order: 1
 <p id="broadcast"></p>
 
 <p>Welcome</p>
-
-The Goals of this site
-
-* Fast
-
-Using Nginx as a webserver and pre-rendering as much content as possible makes this site fast.
-
-* Low Power
-
-The site needs to run on my RaspberryPi, so the tech used should be a light as possible.
-
-* JavaScript
-
-The site is built frontend and back in JavaScript.

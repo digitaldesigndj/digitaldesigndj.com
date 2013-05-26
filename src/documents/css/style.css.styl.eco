@@ -35,8 +35,8 @@ article
 	padding: 24px 48px
 	border: 1px solid white
 	border-radius: 5px
-	background: -webkit-linear-gradient(bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 90%,rgba(255,255,255,0.1) 100%)
-	background: linear-gradient(to top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 90%,rgba(255,255,255,0.1) 100%)
+	background: -webkit-linear-gradient(bottom, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.8) 90%,rgba(255,255,255,0.3) 100%)
+	background: linear-gradient(to top, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.8) 90%,rgba(255,255,255,0.3) 100%)
 
 .outer
 	margin: 28px auto
