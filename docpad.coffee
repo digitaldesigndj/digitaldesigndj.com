@@ -42,7 +42,7 @@ backgrounds =
 		image: "/images/toronto_waterline.jpg"
 	long_exposure_orbit:
 		image: "/images/long_exposure_orbit.jpg"
-backgroundSelection = 'long_exposure_orbit'
+backgroundSelection = 'lake_skyline'
 
 
 # DocPad Configuration
