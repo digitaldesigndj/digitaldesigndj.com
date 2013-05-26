@@ -1,14 +1,17 @@
-define([ 'jquery', 'lastfm-widget', 'scroll-page-offscreen', 'json-widget', 'hbs!hb/github-recent' ]
-	, function( $, lastfmWidget, scrollPageOffscreen, jsonWidget, tmplGithubRecent ) {
-		// run modules of defined functionality
-		scrollPageOffscreen();
+define([ 'lastfm-widget', 'scroll-page-offscreen', 'json-widget', 'hbs!hb/github-recent' ]
+	, function( lastfmWidget, scrollPageOffscreen, jsonWidget, tmplGithubRecent ) {
+
 		lastfmWidget();
+
+		scrollPageOffscreen();
 
 		var username   = 'DigitalDesignDj'
 			, reponame = 'digitaldesigndj.com'
-			, url      = 'https://api.github.com/repos/' + username + '/' + reponame + '/commits'
-			, widget   = '.github-commits';
+		jsonWidget( 
+			'.github-commits'
+			, 'https://api.github.com/repos/' + username + '/' + reponame + '/commits'
+			, tmplGithubRecent
+		);
 
-		jsonWidget( url, tmplGithubRecent, widget );
 	}
 );
