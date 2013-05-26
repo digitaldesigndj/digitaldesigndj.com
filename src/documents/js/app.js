@@ -1,3 +1,4 @@
+// Configure
 require.config({
 	baseUrl : 'js'
 	, paths : {
@@ -29,7 +30,10 @@ require.config({
 	}
 });
 
+// Drop the puck
 define([
 	'font!typekit,id:czt2jur'
 	, 'main'
+	, 'scroll-page-offscreen'
+	, 'github-widget'
 ]);
