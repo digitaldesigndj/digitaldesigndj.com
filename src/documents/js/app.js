@@ -35,5 +35,5 @@ define([
 	'font!typekit,id:czt2jur'
 	, 'main'
 	, 'scroll-page-offscreen'
-	, 'github-widget'
+	, 'github-widgets'
 ]);

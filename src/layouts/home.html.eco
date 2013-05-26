@@ -8,9 +8,9 @@ layout: default
 
 <div class="lastfm"></div>
 
-<p><a class="twitter-timeline" href="https://twitter.com/digitaldesigndj" data-widget-id="322085118040735745">Tweets by @digitaldesigndj</a></p>
+<div class="github-com"></div>
 
-<div class="github-commits"></div>
+<div class="github-api"></div>
 
 <p><a href="http://stackoverflow.com/users/529698/digitaldesigndj"><img src="http://stackoverflow.com/users/flair/529698.png" width="208" height="58" alt="profile for DigitalDesignDj at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for DigitalDesignDj at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a></p>
 
