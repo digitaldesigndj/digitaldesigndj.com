@@ -31,32 +31,27 @@ define(['underscore', 'jquery', 'hbs!hb/github-recent'], function ( _, $, tmplRe
 	 * Github Widget
 	 */
 
-	var username = 'DigitalDesignDj';
-	var reponame = 'digitaldesigndj.com';
-	var url = 'https://api.github.com/repos/digitaldesigndj/digitaldesigndj.com/commits';
-	var interval_seconds = 10;
-
 	function widget() {
-		var widget = $('.github-commits');
-		var salt = new Date().getTime();
+		var username   = 'DigitalDesignDj'
+			, reponame = 'digitaldesigndj.com'
+			, url      = 'https://api.github.com/repos/' + username + '/' + reponame + '/commits'
+			, widget   = $('.github-commits');
 		if( widget.length ) {
 			$.ajax({
 				url: url
 				, dataType: 'json'
 				, success: function( data ) {
 					if( data ) {
-						// $.each( data, function( i, v ){
-						// 	console.log( v.commit );
-						// 	// data.entries[i].publishedDate = prettyDate( v.publishedDate );
-						// });
-						widget.html( tmplRecent( _.first( data, 10 ) ) );
+						widget
+							.html( tmplRecent( _.first( data, 10 ) ) )
+							.addClass( 'widget' );
 					}else{
 						console.log( data );
 					}
 				}
 			});
 		}
-	}
+	};
 	widget();
 
 });
