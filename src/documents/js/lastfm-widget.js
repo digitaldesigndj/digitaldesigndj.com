@@ -7,17 +7,19 @@ define(['jquery', 'socket-io', 'hbs!hb/lastfm-recent', 'hbs!hb/lastfm-current'],
 		socket.of('/api').on( 'update', function( data ) {
 			console.log( data );
 			$.each( $( '.lastfm' ) , function( i, v ) {
-				var template
-					, widget = $( v );
+				var widget = $( v );
 				if ( widget.length ) {
 					if ( widget.hasClass( 'current' ) ) {
-						template = tmplCurrent;
+						if( data.recenttracks.track.length === 11 ) {
+							widget
+								.html( tmplCurrent( data ) )
+								.addClass( 'widget' );
+						}
 					} else {
-						template = tmplRecent;
+						widget
+							.html( tmplRecent( data ) )
+							.addClass( 'widget' );
 					}
-					widget
-						.html( template( data ) )
-						.addClass( 'widget' );
 				}
 			});
 		});
