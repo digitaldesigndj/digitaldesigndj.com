@@ -6,4 +6,7 @@ define([ 'socket-io', 'lastfm-widget' ], function( io, lastfmWidget ) {
 	socket.of('/api').on( 'update', function( data ) {
 		lastfmWidget( data );
 	});
+	socket.of('/api').on( 'broadcast', function( data ) {
+		console.log( data );
+	});
 });
