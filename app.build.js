@@ -4,7 +4,7 @@
 	appDir: "stg/"
 	, baseUrl: "js/"
 	, dir: "out/"
-	, optimize: "none"  //Comment out to uglify
+	// , optimize: "none"  //Comment out to uglify
 	, modules: [
 		{
 			name: "app"
