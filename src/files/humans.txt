@@ -3,7 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Taylor Young - @DigitalDesignDj
 
 # THANKS
 
@@ -11,5 +11,5 @@
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    Normalize.css, jQuery, Modernizr
+    JavaScript, HTML5, CSS3
+    Normalize.css, jQuery, Modernizr, Git, Raspbian, NodeJS, NPM, Nginx, Express, Docpad, Underscore, Stylus, Coffee Script, Markdown, Eco, Handlebars, RequireJs, LastFM, Github, GitHubBadge, Gravatar, TypeKit, Sublime Text

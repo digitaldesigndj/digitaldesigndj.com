@@ -8,8 +8,3 @@ order: 1
 <p id="broadcast"></p>
 
 <p>Welcome</p>
-
-Live LastFm status streaming. I am trying to update the LastFM widget below to stream my status out to connected clients ( that's you :) )
-
-<!-- The site is optimized to run as quickly as possible. It may not seem super fast, but it is running on a small ARM server (Raspberry Pi) behind a low-grade consumner internet connection (2Mbps). -->
-
