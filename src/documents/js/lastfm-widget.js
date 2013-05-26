@@ -14,7 +14,9 @@ define(['jquery', 'socket-io', 'hbs!hb/lastfm-recent', 'hbs!hb/lastfm-current'],
 				}
 				socket.of('/api').on( 'update', function( data ) {
 					console.log( data );
-					widget.html( template( data ) );
+					widget
+						.html( template( data ) )
+						.addClass( 'widget' );
 				});
 			}
 		});
