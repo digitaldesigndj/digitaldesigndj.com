@@ -9,9 +9,11 @@ define([ 'jquery', 'hbs!hb/lastfm-recent', 'hbs!hb/lastfm-current' ]
 							.html( tmplCurrent( data ) )
 							.addClass( 'widget' );
 					} else {
-						widget
-							.html( tmplRecent( data ) )
-							.addClass( 'widget' );
+						if( !widget.hasClass( 'current' ) ){
+							widget
+								.html( tmplRecent( data ) )
+								.addClass( 'widget' );
+						}
 					}
 				}
 			});
