@@ -28,6 +28,10 @@ Since the site is nice and quick, I have taken the luxury of adding 400ms of del
 
 The site is built frontend and back in JavaScript.
 
+### Building and Deploying
+
+Building and Depoying websites is something I find enjoyable. I think it similar to the allure of a new 'Hello World' program. The build process is awesome, because I get to use the terminal with its 
+
 [NodeJS](http://nodejs.org/) and [NPM](http://npmjs.org) are used to manage scripts on the backend
 
 I use [AMD](http://en.wikipedia.org/wiki/Asynchronous_module_definition) via [RequireJS](http://requirejs.org) on the client side to mangage dependencies and optimize the final output.
