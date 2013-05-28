@@ -14,20 +14,27 @@ That's it, the server, where it's actually sitting right now, on my dresser. If 
 
 ### Fast
 
-Using Nginx as a webserver and pre-rendering as much content as possible makes this site fast.
+Using Nginx as a webserver, pre-rendering files with docpad, and optimizing client side JavaScript with r.js makes this site fast. The max uplink speed of my consumer connection is only 2Mbps.
 
 ### Low Power
 
 The site needs to run on my RaspberryPi, so the tech used should be a light as possible.
 
+### Fun
+
+Since the site is nice and quick, I have taken the luxury of adding 400ms of delay when you change pages (200ms each for in and out transitions). This gives me a chance to do some quick animation (fades) and really set the site experience apart.
+
 ### JavaScript
 
-The site is built frontend and back in JavaScript. I think its beautiul. There are some wierd spots, like 2 different `require` syntaxes for the front and backend. But I think its super.
+The site is built frontend and back in JavaScript.
+
+[NodeJS](http://nodejs.org/) and [NPM](http://npmjs.org) are used to manage scripts on the backend
+
+I use [AMD](http://en.wikipedia.org/wiki/Asynchronous_module_definition) via [RequireJS](http://requirejs.org) on the client side to mangage dependencies and optimize the final output.
 
 ### Awesome Developer Enviornment
 
-**Docpad** allows me to use live-reload and live-preprocessing at the same time. It just might have created a monster, unhappy to work in lesser environments (manually reloading... ugh). But it sure feels like I am peering into future.
-
+**Docpad** allows me to use live-reload and live-preprocessing at the same time. It works over a websocket, so I can have it running on a tablet, phone and computer ( multiple browsers too ) all at the same time
 <!-- If the site is a little slow, its because my consumer Internet connection will only let me squeeze out about 2 Mbps up. The server is also very simple, running an ARM chipset like you would find in a smartphone, but I beleive it's more than powerful enough to saturate the network connection before the hardware starts to hold things up. -->
 
 ## Double Build Optimization
