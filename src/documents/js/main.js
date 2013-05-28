@@ -10,6 +10,7 @@ define([ 'socket-io', 'lastfm-widget' ], function( io, lastfmWidget ) {
 	socket.of('/api').on( 'broadcast', function( data ) {
 		$('#broadcast').text( data );
 	});
+	// Animate In
 	$('.outer').animate({'opacity':'1'}, 250);
 	// Animate Out
 	$("a").on("click", function(){

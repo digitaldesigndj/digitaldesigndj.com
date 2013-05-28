@@ -32,8 +32,9 @@ require.config({
 
 // Drop the puck
 define([
-	'font!typekit,id:czt2jur'
-	, 'main'
+	//'font!typekit,id:czt2jur'
+	//, 'main'
+	'main'
 	, 'scroll-page-offscreen'
 	, 'github-widgets'
 ]);
