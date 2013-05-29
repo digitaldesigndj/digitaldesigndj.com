@@ -1,0 +1,10 @@
+<nav class="pure-menu pure-menu-open pure-menu-horizontal">
+	<ul>
+		<a href="<%= @site.url %>" class="pure-menu-heading">DigitalDesignDj</a>
+	<% for page in @getCollection("html").findAll({isPage:true}).toJSON(): %>
+		<% if page.title isnt "Home": %>
+			<li><a href="<%= page.url %>" <%= if page.id is @document.id then 'class="current"' %>><%= page.title %></a></li>
+		<% end %>
+	<% end %>
+	</ul>
+</nav>

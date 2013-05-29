@@ -72,6 +72,12 @@ docpadConfig =
 	# 			url: 'https://github.com/digitaldesigndj/digitaldesigndj.com.git'
 	# 		]
 
+	environments:
+		development:
+			templateData:
+				site:
+					url: 'http://localhost:9778'
+
 	# =================================
 	# Template Data
 
@@ -106,9 +112,11 @@ docpadConfig =
 			# The website's styles
 			styles: [
 				# 'http://raw.github.com/iamceege/tooltipster/2.1.3/css/tooltipster.css'
-				'/vendor/normalize.css'
-				'/vendor/h5bp.css'
+				'http://yui.yahooapis.com/pure/0.1.0/pure-min.css'
+				# '/vendor/normalize.css'
+				# '/vendor/h5bp.css'
 				'/css/style.css'
+
 			]
 
 			# The website's scripts

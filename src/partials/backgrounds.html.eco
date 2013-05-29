@@ -1,0 +1,12 @@
+<style>
+html {
+	background: url("<%-@background%>") no-repeat center center fixed;
+	background-size: cover;
+	font-family: 'museo-sans', 'Droid Sans', sans-serif;
+	text-shadow: 1px 1px white;
+}
+</style>
+
+<div class="article-background"></div>
+
+<img class="ios-background" src="<%-@background%>" style="display:none;" />

@@ -1,0 +1,8 @@
+	<!-- DocPad Scripts (For Live Reload) -->
+	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
+
+	<!-- RequireJS -->
+	<script data-main="js/app" src="js/lib/require.js"></script>
+
+</body>
+</html>
