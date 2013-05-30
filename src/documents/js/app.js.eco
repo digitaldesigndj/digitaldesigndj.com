@@ -41,6 +41,7 @@ define([
 	// , 'font!typekit,id:czt2jur'
 	, 'scroll-page-offscreen'
 	, 'github-widgets'
+	, 'react-hello'
 	<% if @getEnvironment() is 'development': %>
 		, 'live-reload'
 	<% end %>
