@@ -1,6 +1,5 @@
-define(function () {
+define([ 'socket-io' ], function ( io ) {
 	(function() {
-		console.log("LIVE RELOAD SCRIPT");
 		/* Did we just livereload? */
 		var log = true && localStorage && console && console.log && true;
 		if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
@@ -20,22 +19,7 @@ define(function () {
 		if ( typeof io !== 'undefined' ) {
 			listen();
 		} else {
-			/* Inject socket.io into our page then listen once loaded */
-			var inject = function(){
-				var t = document.createElement('script');
-				t.type = 'text/javascript';
-				t.async = true;
-				t.src = '/socket.io/socket.io.js';
-				t.onload = listen;
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(t,s);
-			};
-			var readyStateCheckInterval = setInterval(function() {
-				if (document.readyState === "complete") {
-					inject();
-					clearInterval(readyStateCheckInterval);
-				}
-			}, 10);
+			console.log( 'io is undefined' );
 		}
 	})();
 });

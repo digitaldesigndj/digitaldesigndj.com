@@ -73,9 +73,9 @@ docpadConfig =
 	# 		]
 	# 		
 	
-	# plugins:
-	# 	livereload:
-	# 		inject: false
+	plugins:
+		livereload:
+			inject: false
 
 	environments:
 		development:
