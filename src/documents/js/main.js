@@ -4,7 +4,7 @@ define([ 'jquery', 'socket-io', 'lastfm-widget' ], function( $, io, lastfmWidget
 		, { resource: 'api/socket.io' }
 	);
 	socket.of('/api').on( 'update', function( data ) {
-		console.log( data );
+		// console.log( data );
 		lastfmWidget( data );
 	});
 	socket.of('/api').on( 'broadcast', function( data ) {
