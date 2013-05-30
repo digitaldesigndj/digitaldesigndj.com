@@ -1,13 +1,6 @@
 ## [DigitalDesignDj](http://digitaldesigndj.com)
 
-### Goals
-
-1. A light as possible (Runs well on RaspberryPi)
-1. Use DocPad (Awesome developer tools)
-1. Use RequireJS & r.js optimizer (Client side build process)
-1. Live updating of content via Sockets.io
-
-The first 3 are complete.
+This is an example of RequireJS and live-reload playing nicely together, while excluding live-reload from the final build. 
 
 ### How to run it locally
 
@@ -45,17 +38,4 @@ optimize/compile JavaScript
 
 This will render a flat site to the `/out` dir
 
-note that generating the static site first is important, or else the live reload scripts will get built into the final product.
-
-### Why DocPad?
-
-1. NodeJS
-2. Live Pre-Processing
-3. Live Reload
-
-### Changelog
-
-Github Widget
-LastFm Widget
-Navigation
-Site Layout
+note that generating the static site first is important, or the live reload script will get built into the final product. This is because during development, the stg folder (where docpad's out has been configured to point in this repo) contains the env=development build of the site, and the r.js optimizer should be used on a env=static build of the site
