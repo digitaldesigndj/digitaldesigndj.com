@@ -1,4 +1,4 @@
-define([ 'jquery', 'socket-io', 'lastfm-widget' ], function( $, io, lastfmWidget ) {
+define([ 'jquery', 'socket-io', 'lastfm-widget', 'react', 'jsx' ], function( $, io, lastfmWidget, React ) {
 	var socket = io.connect(
 		'http://digitaldesigndj.com:8880'
 		, { resource: 'api/socket.io' }
@@ -22,4 +22,11 @@ define([ 'jquery', 'socket-io', 'lastfm-widget' ], function( $, io, lastfmWidget
 		}, animDuration);
 		return false;
 	});
+
+	/** @jsx React.DOM */
+	React.renderComponent(
+		React.DOM.h1(null, "Hello, world!"),
+		document.getElementById('content')
+	);
+
 });

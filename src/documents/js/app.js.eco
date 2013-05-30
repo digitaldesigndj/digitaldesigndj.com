@@ -1,18 +1,20 @@
 // Configure
 require.config({
-	baseUrl : 'js'
-	, paths : {
+	'baseUrl' : 'js'
+	, 'paths' : {
 		'app' : 'app'
 		, 'hb' : 'hb'
-		, 'jquery'                : 'lib/jquery'
-		, 'underscore'            : 'lib/underscore'
-		, 'propertyParser'        : 'plugin/propertyParser'
-		, 'font'                  : 'plugin/font'
-		, 'hbs'                   : 'plugin/hbs'
+		, 'jquery'         : 'lib/jquery'
+		, 'underscore'     : 'lib/underscore'
+		, 'react'          : 'lib/react'
+		// , 'jsx'            : 'lib/JSXTransformer'
+		, 'propertyParser' : 'plugin/propertyParser'
+		, 'font'           : 'plugin/font'
+		, 'hbs'            : 'plugin/hbs'
 	}
-	, shim : {
+	, 'shim' : {
 		'font' : {
-			deps: [ 'propertyParser' ]
+			'deps': [ 'propertyParser' ]
 		}
 		, 'jquery': {
 			'exports' : '$'
@@ -23,8 +25,11 @@ require.config({
 		, 'socket-io': {
 			'exports' : 'io'
 		}
+		, 'react': {
+			'exports' : 'React'
+		}
 	}
-	, hbs: {
+	, 'hbs': {
 		'disableI18n'      : true
 		, 'disableHelpers' : true
 	}
