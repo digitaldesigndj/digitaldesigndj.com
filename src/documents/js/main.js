@@ -1,4 +1,4 @@
-define([ 'jquery', 'socket-io', 'lastfm-widget', 'react', 'jsx' ], function( $, io, lastfmWidget, React ) {
+define([ 'jquery', 'socket-io', 'lastfm-widget', 'react' ], function( $, io, lastfmWidget, React ) {
 	var socket = io.connect(
 		'http://digitaldesigndj.com:8880'
 		, { resource: 'api/socket.io' }
