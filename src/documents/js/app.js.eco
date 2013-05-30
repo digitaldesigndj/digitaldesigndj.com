@@ -32,10 +32,11 @@ require.config({
 
 // Drop the puck
 define([
-	//'font!typekit,id:czt2jur'
-	//, 'main'
 	'main'
+	// , 'font!typekit,id:czt2jur'
 	, 'scroll-page-offscreen'
 	, 'github-widgets'
-	, 'live-reload'
+	<% if @getEnvironment() is 'development': %>
+		, 'live-reload'
+	<% end %>
 ]);

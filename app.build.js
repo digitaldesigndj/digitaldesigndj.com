@@ -27,6 +27,8 @@
 		, 'underscore': {
 			'exports' : '_'
 		}
+		, 'socket-io': {
+			'exports' : 'io'
+		}
 	}
-	
 })
