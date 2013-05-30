@@ -71,12 +71,18 @@ docpadConfig =
 	# 			path: 'test'
 	# 			url: 'https://github.com/digitaldesigndj/digitaldesigndj.com.git'
 	# 		]
+	# 		
+	
+	# plugins:
+	# 	livereload:
+	# 		inject: false
 
 	environments:
 		development:
 			templateData:
 				site:
 					url: 'http://localhost:9778'
+
 
 	# =================================
 	# Template Data

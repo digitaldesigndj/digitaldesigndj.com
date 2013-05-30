@@ -7,4 +7,4 @@ order: 1
 
 <p id="broadcast"></p>
 
-<p>Welcome</p>
+Welcome

@@ -7,7 +7,6 @@ $(function(){
 	var livesocket = io.connect('http://digitaldesigndj.com/', {resource:'api/socket.io'});
 	livesocket.on('news', function (data) {
 		// console.log(data);
-		
 		if(typeof data.messageFromControl === object){
 			template = Handlebars.templates["lastfm-widget-template"];
 			$(".lastfm").html( template(data) );

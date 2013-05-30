@@ -1,21 +1,33 @@
+// Main StyleSheet
+// Assumes PureCSS from YUI is loaded
 
-max_background_opacity = 1
+bg_r = 254
+bg_g = 254
+bg_b = 254
+bg_max_a = 0.8
 
 // Mixins
 gradient()
-	background: -webkit-linear-gradient(bottom, rgba(255,255,255,max_background_opacity) 0%,rgba(255,255,255,max_background_opacity) 90%,rgba(255,255,255,0.3) 100%)
-	background: linear-gradient(to top, rgba(255,255,255,max_background_opacity) 0%,rgba(255,255,255,max_background_opacity) 90%,rgba(255,255,255,0.3) 100%)
+	background: rgba( bg_r, bg_g, bg_b, bg_max_a )
+	// background: -webkit-linear-gradient(bottom, rgba(bg_r,bg_g,bg_b,bg_max_a) 0%,rgba(bg_r,bg_g,bg_b,bg_max_a) 90%,rgba(bg_r,bg_g,bg_b,0.3) 100%)
+	// background: linear-gradient(to top, rgba(bg_r,bg_g,bg_b,bg_max_a) 0%,rgba(bg_r,bg_g,bg_b,bg_max_a) 90%,rgba(bg_r,bg_g,bg_b,0.3) 100%)
 
 border-radius(n)
 	-webkit-border-radius n
 	-moz-border-radius n
 	border-radius n
 
-// Clear
+// Clear ( Normalize included in PureCSS )
 *
 	box-sizing: border-box
 .clear
 	clearfix()
+
+// Everything
+html
+	font-family: 'museo-sans', 'Droid Sans', sans-serif;
+	text-shadow: 1px 1px white;
+	background-size: cover
 
 // Backgrounds
 html.ios
@@ -46,13 +58,10 @@ html.ios
 nav.pure-menu.pure-menu-horizontal
 	position: fixed
 	top: 0
-	background: rgba(255,255,255,max_background_opacity)
+	background: rgba(bg_r,bg_g,bg_b,bg_max_a)
 	border-bottom: 1px solid #999
 	box-shadow: 0 1px 0 black
-
-.pure-menu a:link
-	text-shadow: none
-
+	color: black
 
 // Content Box
 article
@@ -71,6 +80,12 @@ article
 	border-radius: 5px
 	box-shadow: 1px 1px 2px black
 	opacity: 0
+
+// Mobile 
+@media screen and (max-width: 480px)
+	article
+		width: 95%
+		padding: 12px 24px
 
 // Widget Box
 .widget
@@ -94,9 +109,3 @@ article
 	span
 		font-size: 10px
 		font-weight: normal
-
-// Mobile 
-@media screen and (max-width: 480px)
-	article
-		width: 95%
-		padding: 12px 24px
