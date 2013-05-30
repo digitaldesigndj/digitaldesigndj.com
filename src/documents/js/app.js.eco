@@ -36,6 +36,7 @@ define([
 	// , 'font!typekit,id:czt2jur'
 	, 'scroll-page-offscreen'
 	, 'github-widgets'
+	, 'analytics'
 	<% if @getEnvironment() is 'development': %>
 		, 'live-reload'
 	<% end %>
