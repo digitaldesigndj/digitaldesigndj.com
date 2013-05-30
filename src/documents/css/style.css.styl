@@ -1,147 +1,23 @@
 
+max_background_opacity = 1
 
-colorLink = #333
-colorLinkHover = #0cf
+// Mixins
+gradient()
+	background: -webkit-linear-gradient(bottom, rgba(255,255,255,max_background_opacity) 0%,rgba(255,255,255,max_background_opacity) 90%,rgba(255,255,255,0.3) 100%)
+	background: linear-gradient(to top, rgba(255,255,255,max_background_opacity) 0%,rgba(255,255,255,max_background_opacity) 90%,rgba(255,255,255,0.3) 100%)
 
-*
-	box-sizing: border-box
-
-.addthis_floating_style
-	left: 10px !important
-	box-sizing: content-box
-
-nav
-	position: fixed
-	top: 0
-
-// body
-// 	padding-top: 28px
-
-/*
-nav
-	position: fixed
-	top: 0
-	left: 0
-	width: 100%
-	background: #FFF
-	a
-		padding: 0 20px
-		border-right: 1px dotted #000
-		line-height: 20px
-	a:link
-		text-decoration: none
-		text-shadow: none
-body
-	padding-top: 20px;
-*/
-
-article
-	z-index: 52
-	margin: 0 auto
-	padding: 24px 48px
-	border: 1px solid white
-	border-radius: 5px
-	background: -webkit-linear-gradient(bottom, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.8) 90%,rgba(255,255,255,0.3) 100%)
-	background: linear-gradient(to top, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.8) 90%,rgba(255,255,255,0.3) 100%)
-
-.outer
-	margin: 60px auto
-	padding: 0
-	border: 1px solid black
-	width: 482px
-	border-radius: 5px
-	box-shadow: 1px 1px 2px black
-	opacity: 0
-
-
-.subscribe-button-inner
-	margin-bottom: -5px !important
-
-.twitter-follow-button
-	display: inline-block
-	height: 1em
-
-.social-buttons
-	.social-button
-		display: inline-block
-		width: 100px
-		text-align: left
-		overflow: hidden
-		&.google-plus-one-button
-		&.hacker-news-submit-button
-			width: 80px
-		&.twitter-follow-button
-			width: 170px
-			height: auto
-		&.reddit-submit-button
-			width: 140px
-			iframe
-				padding-top: 3px
-
-// Links
-a,a:link,a:visited
-	cursor: pointer
-	color: colorLink
-	text-decoration: underline
-	text-shadow: 1px 1px colorLinkHover
-a:hover
-	color: colorLinkHover !important
-	text-shadow: 1px 1px colorLink
-
+border-radius(n)
+	-webkit-border-radius n
+	-moz-border-radius n
+	border-radius n
 
 // Clear
+*
+	box-sizing: border-box
 .clear
 	clearfix()
 
-// People
-.people
-	&
-	*
-		margin: 0
-		padding: 0
-		border: none
-
-	&
-	.person
-		list-style: none
-
-	.person
-	.person-name
-	.person-link
-		display: block
-		height: 42px
-		width: 42px
-		text-indent: -99999px
-
-	.person
-		float: left
-		margin: 2px
-		position: relative
-
-	.person-name
-	.perosn-link
-		position: absolute
-		top: 0
-		left: 0
-
-	.person-link
-		text-decoration: none
-		&:hover
-			.person-name
-				z-index: 500
-				box-shadow: 0 0 5px #555
-
-	.person-name
-		overflow: hidden
-		background-size: 42px 42px !important
-		transition: all 0.2s ease-out
-
-@media screen and (max-width: 480px)
-	article
-		width: 95%
-		padding: 12px 24px
-
-
+// Backgrounds
 html.ios
 	&
 		background: white
@@ -151,6 +27,8 @@ html.ios
 		left: 0
 		display: block !important
 		z-index: 49
+		width: 100%
+		height: 100%
 
 	.wrapper
 		z-index: 50
@@ -164,6 +42,37 @@ html.ios
 	.ios-background
 		width: 800px
 
+// Menu
+nav.pure-menu.pure-menu-horizontal
+	position: fixed
+	top: 0
+	background: rgba(255,255,255,max_background_opacity)
+	border-bottom: 1px solid #999
+	box-shadow: 0 1px 0 black
+
+.pure-menu a:link
+	text-shadow: none
+
+
+// Content Box
+article
+	z-index: 52
+	margin: 0 auto
+	padding: 24px 48px
+	border: 1px solid white
+	border-radius: 5px
+	gradient()
+
+.outer
+	margin: 60px auto
+	padding: 0
+	border: 1px solid black
+	width: 482px
+	border-radius: 5px
+	box-shadow: 1px 1px 2px black
+	opacity: 0
+
+// Widget Box
 .widget
 	border-top: 1px solid white
 	border-left: 1px solid white
@@ -186,3 +95,8 @@ html.ios
 		font-size: 10px
 		font-weight: normal
 
+// Mobile 
+@media screen and (max-width: 480px)
+	article
+		width: 95%
+		padding: 12px 24px
