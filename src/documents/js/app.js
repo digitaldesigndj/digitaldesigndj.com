@@ -8,7 +8,7 @@ require.config({
 		, 'underscore'            : 'lib/underscore'
 		, 'propertyParser'        : 'plugin/propertyParser'
 		, 'font'                  : 'plugin/font'
-		, 'hbs'                   : 'plugin/hbs'
+		// , 'hbs'                   : 'plugin/hbs'
 		// , 'main'                  : 'main'
 		// , 'scroll-page-offscreen' : 'scroll-page-offscreen'
 		// , 'github-widgets'        : 'github-widgets'
@@ -25,9 +25,6 @@ require.config({
 		'font' : {
 			deps: [ 'propertyParser' ]
 		}
-		, 'hbs' : {
-			deps : [ 'Handlebars', 'hbs/underscore', 'hbs/i18nprecompile', 'hbs/json2' ]
-		}
 		, 'jquery': {
 			'exports' : '$'
 		}
@@ -37,12 +34,15 @@ require.config({
 		, 'socket-io': {
 			'exports' : 'io'
 		}
-		// , 'main' : {
-		// 	deps: [ 'socket-io', 'lastfm-widget' ]
+		// , 'hbs' : {
+		// 	deps : [ 'Handlebars', 'hbs/underscore', 'hbs/i18nprecompile', 'hbs/json2' ]
 		// }
-		, 'scroll-page-offscreen' : {
-			deps: [ 'jquery' ]
-		}
+		// , 'main' : {
+		// 	deps: [ 'jquery', 'socket-io', 'lastfm-widget' ]
+		// }
+		// , 'scroll-page-offscreen' : {
+		// 	deps: [ 'jquery' ]
+		// }
 		// , 'github-widget' : {
 		// 	deps: [ 'hbs', 'json-widget', 'hbs!hb/github-com', 'hbs!hb/github-api' ]
 		// }
@@ -65,6 +65,6 @@ define([
 	//, 'main'
 	'main'
 	, 'scroll-page-offscreen'
-	, 'github-widgets'
+	//, 'github-widgets'
 	, 'live-reload'
 ]);
