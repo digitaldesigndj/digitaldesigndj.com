@@ -22,4 +22,4 @@
 	</div>
 </div>
 
-<%- @partial( 'foot.html.eco', @ ) %>
+<%- @partial( 'foot.html', @ ) %>
