@@ -42,7 +42,9 @@ backgrounds =
 		image: "/images/toronto_waterline.jpg"
 	long_exposure_orbit:
 		image: "/images/long_exposure_orbit.jpg"
-backgroundSelection = 'lake_skyline'
+	xdf_earth:
+		image: "/images/xdf_earth.png"
+backgroundSelection = 'xdf_earth'
 
 
 # DocPad Configuration
