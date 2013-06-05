@@ -23,13 +23,15 @@ border-radius(n)
 .clear
 	clearfix()
 
-// Everything
-html
+// Everything (Defaults)
+body
 	font-family: 'museo-sans', 'Droid Sans', sans-serif;
 	text-shadow: 1px 1px white;
-	background-size: cover
+	
 
 // Backgrounds
+html
+	background-size: cover
 html.ios
 	&
 		background: white
@@ -39,8 +41,6 @@ html.ios
 		left: 0
 		display: block !important
 		z-index: 49
-		width: 100%
-		height: 100%
 
 	.wrapper
 		z-index: 50

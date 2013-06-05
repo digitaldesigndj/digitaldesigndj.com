@@ -1,6 +1,6 @@
 <style>
 html {
-	background: url("<%-@background%>") no-repeat center center fixed;
+	background: url("<%-@background%>") repeat center center fixed;
 }
 </style>
 
