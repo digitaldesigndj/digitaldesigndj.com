@@ -44,7 +44,7 @@ backgrounds =
 		image: "/images/long_exposure_orbit.jpg"
 	xdf_earth:
 		image: "/images/xdf_earth.png"
-backgroundSelection = 'xdf_earth'
+backgroundSelection = 'lake_skyline'
 
 
 # DocPad Configuration
