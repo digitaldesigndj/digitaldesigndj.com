@@ -1,6 +1,6 @@
 define([ 'jquery', 'socket-io', 'lastfm-widget' ], function( $, io, lastfmWidget ) {
 	var socket = io.connect(
-		'http://digitaldesigndj.com:8880'
+		'http://127.0.0.1:8880'
 		, { resource: 'api/socket.io' }
 	);
 	socket.of('/api').on( 'update', function( data ) {

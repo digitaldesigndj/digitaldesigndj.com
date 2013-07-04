@@ -44,7 +44,9 @@ backgrounds =
 		image: "/images/long_exposure_orbit.jpg"
 	xdf_earth:
 		image: "/images/xdf_earth.png"
-backgroundSelection = 'lake_skyline'
+	santa_monica:
+		image: "/images/santa_monica_pier.jpg"
+backgroundSelection = 'santa_monica'
 
 
 # DocPad Configuration
