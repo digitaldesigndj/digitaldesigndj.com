@@ -46,7 +46,9 @@ backgrounds =
 		image: "/images/xdf_earth.png"
 	santa_monica:
 		image: "/images/santa_monica_pier.jpg"
-backgroundSelection = 'santa_monica'
+	road_sunset:
+		image: "/images/road_sunset.jpg"
+backgroundSelection = 'road_sunset'
 
 
 # DocPad Configuration
