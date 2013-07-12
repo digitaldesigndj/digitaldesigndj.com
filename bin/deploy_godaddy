@@ -1,0 +1,8 @@
+#!/bin/bash
+echo __ deploying digitaldesigndj.com to raspi
+ssh eb702445@taylordyoung.com <<'ENDSSH'
+cd html/
+echo __ pulling from digitaldesigndj.com.out
+git pull origin master
+echo __ all done! ^_^
+ENDSSH
