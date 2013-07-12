@@ -1,8 +1,7 @@
 # Import
 balUtil = require('bal-util')
-# growl = require('growl')
-# growl('You have mail!')
-# growl('5 new messages', { sticky: true })
+growl = require('growl')
+growl('The website is running')
 
 ###
 twit = require('twit')
