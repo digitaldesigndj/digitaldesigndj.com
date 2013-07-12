@@ -39,7 +39,3 @@ optimize/compile JavaScript
 This will render a flat site to the `/out` dir
 
 note that generating the static site first is important, or the live reload script will get built into the final product. This is because during development, the stg folder (where docpad's out has been configured to point in this repo) contains the env=development build of the site, and the r.js optimizer should be used on a env=static build of the site
-
-__  __  ________ __  _    _ 
-\ \/_/ _ | | |_ / /\| |\/| |
-/_/\_\   |_|_|_/_/--|_|  |_|
