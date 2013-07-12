@@ -8,8 +8,6 @@
 
 			<%- @content %>
 
-			<hr />
-
 			<% if @document.title isnt "Home": %>
 
 				<div class="lastfm current"></div>

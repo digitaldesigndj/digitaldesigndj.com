@@ -4,7 +4,7 @@ layout: default
 
 <%- @content %>
 
-<div class="lastfm current"></div>
+<!-- <div class="lastfm current"></div>
 
 <div class="lastfm"></div>
 
@@ -16,4 +16,4 @@ layout: default
 
 <iframe src="http://githubbadge.appspot.com/badge/DigitalDesignDj?a=0" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder=0></iframe>
 
-<p><a href="http://www.mymusichabits.com/visualize/DigitalDesignDj">My Music Listening Habits</a></p>
+<p><a href="http://www.mymusichabits.com/visualize/DigitalDesignDj">My Music Listening Habits</a></p> -->

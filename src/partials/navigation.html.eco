@@ -1,5 +1,5 @@
 <nav class="pure-menu pure-menu-open pure-menu-horizontal">
-	<a href="<%= @site.url %>" class="pure-menu-heading">DigitalDesignDj</a>
+	<a href="/" class="pure-menu-heading">Taylor</a>
 	<ul>
 	<% for page in @getCollection("html").findAll({isPage:true}).toJSON(): %>
 		<% if page.title isnt "Home": %>
