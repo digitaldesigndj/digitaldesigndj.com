@@ -3,16 +3,6 @@ balUtil = require('bal-util')
 growl = require('growl')
 growl('The website is running')
 
-###
-twit = require('twit')
-twitConnection = new twit(
-	consumer_key: process.env.TWITTER_CONSUMER_KEY
-	consumer_secret: process.env.TWITTER_CONSUMER_SECRET
-	access_token: process.env.TWITTER_ACCESS_TOKEN
-	access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
-)
-###
-
 # Background
 backgrounds =
 	blossom:
@@ -47,7 +37,7 @@ backgrounds =
 		image: "/images/santa_monica_pier.jpg"
 	road_sunset:
 		image: "/images/road_sunset.jpg"
-backgroundSelection = 'road_sunset'
+backgroundSelection = 'santa_monica'
 
 
 # DocPad Configuration

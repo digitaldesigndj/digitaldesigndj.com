@@ -2,6 +2,8 @@
 echo __ deploying digitaldesigndj.com to raspi
 ssh pi@djmux.com <<'ENDSSH'
 cd digitaldesigndj.com/
+echo __ npm update
+npm install
 echo __ getting latest commits
 git pull origin master
 echo __ re-generating site
