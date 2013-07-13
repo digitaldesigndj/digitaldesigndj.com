@@ -40,8 +40,6 @@ This will render a flat site to the `/out` dir
 
 The out dir is not tracked here, but in another git repository. You can find it [here](https://github.com/digitaldesigndj/digitaldesigndj.com.out).
 
-### Dont forget to change the env
+Don't forget to change the env - note that generating the static site first is important, or the live reload script will get built into the final product. This is because during development, the stg folder (where docpad's out has been configured to point in this repo) contains the env=development build of the site, and the r.js optimizer should be used on a env=static build of the site
 
-note that generating the static site first is important, or the live reload script will get built into the final product. This is because during development, the stg folder (where docpad's out has been configured to point in this repo) contains the env=development build of the site, and the r.js optimizer should be used on a env=static build of the site
-
-
+You can look into the `bin/` folder to see some deploy scripts that connect with ssh via private key and move or build the site on a remote server.
