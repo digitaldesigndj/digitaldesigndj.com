@@ -116,7 +116,7 @@ docpadConfig =
 				'http://yui.yahooapis.com/pure/0.1.0/pure-min.css'
 				# '/vendor/normalize.css'
 				# '/vendor/h5bp.css'
-				'/css/style.css'
+				'/css/main.css'
 
 			]
 
