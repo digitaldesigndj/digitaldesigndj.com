@@ -1,36 +1,38 @@
 // Configure
 require.config({
-	'baseUrl': 'js',
-	'paths': {
-		'app': 'app',
-		'hb': 'hb',
-		'jquery': 'lib/jquery',
-		'underscore': 'lib/underscore',
-		'propertyParser': 'plugin/propertyParser',
-		'font': 'plugin/font',
-		'hbs': 'plugin/hbs'
+	baseUrl: 'js',
+	paths: {
+		app: 'app',
+		hb: 'hb',
+		jquery: 'lib/jquery',
+		underscore: 'lib/underscore',
+		propertyParser: 'plugin/propertyParser',
+		font: 'plugin/font',
+		hbs: 'plugin/hbs',
+		cycle: '../../../bower_components/cycle/index',
+		knockout: '../../../bower_components/knockout/index'
 	},
-	'shim': {
-		'font': {
-			'deps': [
+	shim: {
+		font: {
+			deps: [
 				'propertyParser'
 			]
 		},
-		'jquery': {
-			'exports': '$'
+		jquery: {
+			exports: '$'
 		},
-		'underscore': {
-			'exports': '_'
+		underscore: {
+			exports: '_'
 		},
 		'socket-io': {
-			'exports': 'io'
+			exports: 'io'
 		}
 	},
-	'hbs': {
-		'disableI18n': {
+	hbs: {
+		disableI18n: {
 
 		},
-		'disableHelpers': {
+		disableHelpers: {
 
 		}
 	}
