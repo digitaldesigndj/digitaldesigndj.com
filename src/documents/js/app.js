@@ -9,8 +9,8 @@ require.config({
 		propertyParser: 'plugin/propertyParser',
 		font: 'plugin/font',
 		hbs: 'plugin/hbs',
-		cycle: '../../files/bower/cycle/index',
-		knockout: '../../files/bower/knockout/index'
+		cycle: 'bower/cycle/index',
+		knockout: 'bower/knockout/index'
 	},
 	shim: {
 		font: {
