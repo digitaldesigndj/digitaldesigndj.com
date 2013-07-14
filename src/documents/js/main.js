@@ -1,4 +1,5 @@
 define([ 'jquery', 'underscore' ], function( $, _ ) {
+	$('.no-js').removeClass('no-js');
 	// Animate In
 	$('.outer').animate({'opacity':'1'}, 250);
 	// Animate Out
