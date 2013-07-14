@@ -7,11 +7,6 @@
     "**/*.txt"
   ],
   "dependencies": {
-    "<name>": "<version>",
-    "<name>": "<folder>",
-    "<name>": "<package>"
-  },
-  "devDependencies": {
-    "<test-framework-name>": "<version>"
+    "knockout": "http://knockoutjs.com/downloads/knockout-2.3.0.js"
   }
 }
