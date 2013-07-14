@@ -9,8 +9,8 @@ require.config({
 		propertyParser: 'plugin/propertyParser',
 		font: 'plugin/font',
 		hbs: 'plugin/hbs',
-		cycle: '../../../bower_components/cycle/index',
-		knockout: '../../../bower_components/knockout/index'
+		cycle: '../../files/bower/cycle/index',
+		knockout: '../../files/bower/knockout/index'
 	},
 	shim: {
 		font: {
@@ -26,6 +26,9 @@ require.config({
 		},
 		'socket-io': {
 			exports: 'io'
+		},
+		knockout: {
+			exports: 'ko'
 		}
 	},
 	hbs: {
@@ -41,6 +44,7 @@ require.config({
 // Drop the puck
 define([
 	'main'
+	, 'koexample'
 	// , 'font!typekit,id:czt2jur'
 	, 'scroll-page-offscreen'
 	, 'github-widgets'
