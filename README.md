@@ -26,6 +26,16 @@ During development, we don't use the optimized JS. To fire up the dev server jus
 	
 I successful you should have the dev site running at http://localhost:9887, the files being served are in `stg/`, the `src/` dir holds the source files before they are parsed by docpad. Do your editing in there.
 
+### Install a new client side dependancy
+
+1. define a new item in `bower.json` - `vi bower.json`
+2. run `bower install`
+3. run `grunt default`
+4. start dev server `docpad run`
+5. define exports `jquery{ exports: $ },`
+6. use lib via `require(['jquery'],function($){});`
+7. for now, before build, copy paths to app.build.js
+
 ### Production Process
 
 build docpad

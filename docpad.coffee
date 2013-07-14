@@ -51,6 +51,8 @@ docpadConfig = {
 	# r.js optimizes stg/ in second build step and writes final site to out/
 	outPath: 'stg'
 
+	ignorePaths: ['js/bower']
+
 	# =================================
 	# Plugins Config
 	

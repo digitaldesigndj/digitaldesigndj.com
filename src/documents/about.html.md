@@ -4,7 +4,8 @@ layout: default
 isPage: true
 order: 2
 ---
-This site is hosted on a Raspberry Pi
+
+This site is hosted on a Raspberry Pi (digitaldesigndj.com), and also on GoDaddy Linux Shared Hosting (taylordyoung.com). 
 
 ![RaspberryPi](/images/raspi.jpg)
 
