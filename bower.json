@@ -7,6 +7,7 @@
     "**/*.txt"
   ],
   "dependencies": {
-    "knockout": "http://knockoutjs.com/downloads/knockout-2.3.0.js"
+    "knockout": "http://knockoutjs.com/downloads/knockout-2.3.0.js",
+    "cycle": "https://raw.github.com/malsup/malsup.github.com/master/jquery.cycle2.js"
   }
 }
