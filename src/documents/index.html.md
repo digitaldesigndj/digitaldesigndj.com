@@ -10,6 +10,11 @@ order: 1
 Welcome to my site.
 
 <!-- <pre data-bind="text: ko.toJSON($data, null, 2)"></pre> -->
+<p class='grandTotal'>
+    Total value: <span data-bind='text: formatCurrency(grandTotal())'> </span>
+</p>
+<button data-bind='click: addLine'>Add product</button>
+<button data-bind='click: save'>Submit order</button>
 
 <table width='100%'>
     <thead>
@@ -45,8 +50,6 @@ Welcome to my site.
         </tr>
     </tbody>
 </table>
-<p class='grandTotal'>
-    Total value: <span data-bind='text: formatCurrency(grandTotal())'> </span>
-</p>
+
 <button data-bind='click: addLine'>Add product</button>
 <button data-bind='click: save'>Submit order</button>
