@@ -3,7 +3,7 @@ echo __ generating site with --env static
 docpad generate --env static
 echo __ r.js optimizing the site
 node r.js -o app.build.js
-echo __ copying files
+# echo __ copying files // Destroys git.. 
 # rm -rf ~/digitaldesigndj.com.out
 # mkdir ~/digitaldesigndj.com.out
 # mv ~/digitaldesigndj.com/out ~/digitaldesigndj.com.out/godaddy

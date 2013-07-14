@@ -9,11 +9,44 @@ order: 1
 
 Welcome to my site.
 
-<div>You've clicked <span data-bind='text: numberOfClicks'>&nbsp;</span> times</div>
- 
-<button data-bind='click: registerClick, disable: hasClickedTooManyTimes'>Click me</button>
- 
-<div data-bind='visible: hasClickedTooManyTimes'>
-    That's too many clicks! Please stop before you wear out your fingers.
-    <button data-bind='click: resetClicks'>Reset clicks</button>
-</div>
+<!-- <pre data-bind="text: ko.toJSON($data, null, 2)"></pre> -->
+
+<table width='100%'>
+    <thead>
+        <tr>
+            <th width='25%'>Category</th>
+            <th width='25%'>Product</th>
+            <th class='price' width='15%'>Price</th>
+            <th class='quantity' width='10%'>Quantity</th>
+            <th class='price' width='15%'>Subtotal</th>
+            <th width='10%'> </th>
+        </tr>
+    </thead>
+    <tbody data-bind='foreach: lines'>
+        <tr>
+            <td>
+                <select data-bind='options: sampleProductCategories, optionsText: "name", optionsCaption: "Select...", value: category'> </select>
+            </td>
+            <td data-bind="with: category">
+                <select data-bind='options: products, optionsText: "name", optionsCaption: "Select...", value: $parent.product'> </select>
+            </td>
+            <td class='price' data-bind='with: product'>
+                <span data-bind='text: formatCurrency(price)'> </span>
+            </td>
+            <td class='quantity'>
+                <input data-bind='visible: product, value: quantity, valueUpdate: "afterkeydown"' />
+            </td>
+            <td class='price'>
+                <span data-bind='visible: product, text: formatCurrency(subtotal())' > </span>
+            </td>
+            <td>
+                <a href='#' data-bind='click: $parent.removeLine'>Remove</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p class='grandTotal'>
+    Total value: <span data-bind='text: formatCurrency(grandTotal())'> </span>
+</p>
+<button data-bind='click: addLine'>Add product</button>
+<button data-bind='click: save'>Submit order</button>
