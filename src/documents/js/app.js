@@ -2,12 +2,12 @@
 require.config({
 	baseUrl: 'js',
 	paths: {
-		app: 'app',
-		cycle: 'bower/cycle/index',
-		isotope: 'bower/isotope/index',
-		jquery: 'bower/jquery/index',
-		knockout: 'bower/knockout/index',
-		underscore: 'bower/underscore/index'
+		app        : 'app',
+		cycle      : 'bower/cycle/index',
+		isotope    : 'bower/isotope/index',
+		jquery     : 'bower/jquery/index',
+		knockout   : 'bower/knockout/index',
+		underscore : 'bower/underscore/index'
 	},
 	shim: {
 		font: {
@@ -40,9 +40,9 @@ require.config({
 
 // Drop the puck
 define([
-	'main'
-	, 'koexample'
-	// , 'font!typekit,id:czt2jur'
-	, 'scroll-page-offscreen'
-	, 'live-reload'
+	'main',
+	'koexample',
+	// 'font!typekit,id:czt2jur',
+	'scroll-page-offscreen',
+	'live-reload'
 ]);
