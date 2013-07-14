@@ -4,7 +4,7 @@ growl = require('growl')
 growl('The website is running')
 
 # Background
-backgrounds =
+backgrounds = 
 	blossom:
 		image: "/images/cherry_blossom.jpg"
 		description: "High Park Cherry Blossoms 2013, Toronto ON."
@@ -41,7 +41,7 @@ backgroundSelection = 'santa_monica'
 
 
 # DocPad Configuration
-docpadConfig =
+docpadConfig = {
 
 	# =================================
 	# Standard Configuration
@@ -77,6 +77,7 @@ docpadConfig =
 			templateData:
 				site:
 					url: 'http://localhost:9778'
+
 
 
 	# =================================
@@ -188,5 +189,7 @@ docpadConfig =
 				else
 					next()
 
-# Export
+}
+
+# Export our DocPad Configuration
 module.exports = docpadConfig

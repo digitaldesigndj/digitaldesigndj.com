@@ -10,7 +10,8 @@ require.config({
 		font: 'plugin/font',
 		hbs: 'plugin/hbs',
 		cycle: 'bower/cycle/index',
-		knockout: 'bower/knockout/index'
+		knockout: 'bower/knockout/index',
+		isotope: 'bower/isotope/index'
 	},
 	shim: {
 		font: {

@@ -34,12 +34,13 @@
     "docpad-plugin-services": "2.x",
     "docpad-plugin-stylus": "2.x",
     "docpad-plugin-text": "2.x",
-    "bal-util": "~1.16.11",
+    "bal-util": "~1.16.13",
     "socket.io-client": "~0.9.11",
     "backbone": "~1.0.0",
     "query-engine": "~1.5.2",
     "underscore": "~1.4.4",
-    "requirejs": "~2.1.6"
+    "requirejs": "~2.1.6",
+    "grunt": "~0.4.1"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "2.x",

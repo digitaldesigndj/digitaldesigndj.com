@@ -19,6 +19,9 @@
 		, 'propertyParser' : 'plugin/propertyParser'
 		, 'font'           : 'plugin/font'
 		, 'hbs'            : 'plugin/hbs'
+		, 'cycle'          : 'bower/cycle/index'
+		, 'knockout'       : 'bower/knockout/index'
+		, 'isotope'        : 'bower/isotope/index'
 	}
 	, shim : {
 		'jquery': {
