@@ -10,6 +10,10 @@ require.config({
 	}
 });
 define( function( require ) {
-	require('common');
-	require('cycle');
+	return function() {
+		require('cycle');
+		$( '.cycle-slideshow' ).on( 'cycle-before', function(e, optionHash, outgoingSlideEl, incomingSlideEl, forwardFlag ) {
+			console.log(e, outgoingSlideEl);
+		});
+	}
 });

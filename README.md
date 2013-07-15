@@ -42,6 +42,8 @@ build docpad
 
 	docpad generate --env static
 
+this will create the `stg/` directory
+
 optimize/compile JavaScript
 
 	node r.js -o app.build.js
@@ -53,3 +55,21 @@ The out dir is not tracked here, but in another git repository. You can find it 
 Don't forget to change the env - note that generating the static site first is important, or the live reload script will get built into the final product. This is because during development, the stg folder (where docpad's out has been configured to point in this repo) contains the env=development build of the site, and the r.js optimizer should be used on a env=static build of the site
 
 You can look into the `bin/` folder to see some deploy scripts that connect with ssh via private key and move or build the site on a remote server.
+
+
+### Files
+
+app.build.js - paths for r.js optimization step
+bin - helper scripts
+bower.json - defines client side deps
+docpad.coffee - docpad configuration
+Gruntfile.js - grunt config
+LICENSE.md
+node_modules - location of server side  
+out - static site, ready for 
+package.json - defines server side deps
+Procfile
+r.js - r.js optimizer script
+README.md
+src - EDIT THINGS IN HERE
+stg - preview files, dev server files

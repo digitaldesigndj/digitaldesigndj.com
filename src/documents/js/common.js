@@ -14,19 +14,24 @@ require.config({
 	},
 	shim: {
 		cycle: {
-			deps: ['jquery']
+			deps: [
+				'jquery'
+			]
 		},
 		'scroll-page-offscreen': {
-			deps: ['jquery']
+			deps: [
+				'jquery'
+			]
 		},
 		main: {
-			deps: ['jquery']
-		},
+			deps: [
+				'jquery'
+			]
+		}
 	}
 });
 
 define( function( require ) {
-	require('jquery');
 	require('scroll-page-offscreen');
 	// require('live-reload');
 	require('main');
