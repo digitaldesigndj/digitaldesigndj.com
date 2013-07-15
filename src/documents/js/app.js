@@ -14,6 +14,9 @@ require.config({
 		jquery: {
 			exports: '$'
 		},
+		cycle: {
+			deps: ['jquery']
+		},
 		underscore: {
 			exports: '_'
 		},
@@ -31,5 +34,6 @@ define([
 	'main',
 	'koexample',
 	'scroll-page-offscreen',
-	'live-reload'
+	'live-reload',
+	'cycle'
 ]);
