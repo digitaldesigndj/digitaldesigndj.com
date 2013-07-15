@@ -1,6 +1,7 @@
-out
 .AppleDouble
 node_modules
 *.env
+out
 stg
+report
 src/documents/bower
