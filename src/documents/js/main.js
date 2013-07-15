@@ -1,4 +1,6 @@
-define([ 'jquery', 'underscore' ], function( $, _ ) {
+define( function( require ) {
+	var $ = require('jquery'),
+		_ = require('underscore');
 	$('.no-js').removeClass('no-js');
 	// Animate In
 	$('.outer').animate({'opacity':'1'}, 250);
