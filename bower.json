@@ -11,6 +11,8 @@
     "cycle": "https://raw.github.com/malsup/malsup.github.com/master/jquery.cycle2.js",
     "isotope": "http://isotope.metafizzy.co/jquery.isotope.min.js",
     "underscore": "http://underscorejs.org/underscore.js",
-    "jquery": "http://code.jquery.com/jquery-1.10.2.js"
+    "jquery": "http://code.jquery.com/jquery-1.10.2.js",
+    "require": "http://requirejs.org/docs/release/2.1.8/comments/require.js",
+    "pure": "http://yui.yahooapis.com/pure/0.1.0/pure-min.css"
   }
 }

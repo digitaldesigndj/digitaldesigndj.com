@@ -5,6 +5,7 @@
 	 baseUrl: "js/",
 	 dir: "out/",
 	//  optimize: "none"  //Comment out to uglify,
+	preserveLicenseComments: false,
 	modules: [
 		{
 			name: "app"
@@ -13,25 +14,11 @@
 	// paths and shim are mirrored in app.js,
 	paths: {
 		app: 'app',
-		hb: 'hb',
-		jquery: 'lib/jquery',
-		underscore: 'lib/underscore',
-		propertyParser: 'plugin/propertyParser',
-		font: 'plugin/font',
-		hbs: 'plugin/hbs',
 		cycle: 'bower/cycle/index',
+		isotope: 'bower/isotope/index',
+		jquery: 'bower/jquery/index',
 		knockout: 'bower/knockout/index',
-		isotope: 'bower/isotope/index'
-	},
-	shim : {
-		'jquery': {
-			'exports' : '$'
-		},
-		 'underscore': {
-			'exports' : '_'
-		},
-		 'socket-io': {
-			'exports' : 'io'
-		}
+		underscore: 'bower/underscore/index',
+		require: 'bower/require/index'
 	}
 })

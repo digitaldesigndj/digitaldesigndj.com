@@ -110,13 +110,13 @@ docpadConfig = {
 
 			# The website keywords (for SEO) separated by commas
 			keywords: """
-				Digtial Media, Digital Design, Digital Art, Disk Jockey, DJ, Code, Node, JavaScript
+				Digtial Media, Digital Design, Digital Art, Code, Node, JavaScript, Disk Jockey, DJ
 				"""
 
 			# The website's styles
 			styles: [
 				# 'http://raw.github.com/iamceege/tooltipster/2.1.3/css/tooltipster.css'
-				'http://yui.yahooapis.com/pure/0.1.0/pure-min.css'
+				'/js/bower/pure/index.css'
 				# '/vendor/normalize.css'
 				# '/vendor/h5bp.css'
 				'/css/main.css'
