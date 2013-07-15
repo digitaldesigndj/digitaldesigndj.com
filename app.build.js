@@ -14,11 +14,11 @@
 	// paths and shim are mirrored in app.js,
 	paths: {
 		app: 'app',
-		cycle: 'bower/cycle/index',
-		isotope: 'bower/isotope/index',
-		jquery: 'bower/jquery/index',
-		knockout: 'bower/knockout/index',
-		underscore: 'bower/underscore/index',
-		require: 'bower/require/index'
+		cycle: '../bower/cycle/index',
+		isotope: '../bower/isotope/index',
+		jquery: '../bower/jquery/index',
+		knockout: '../bower/knockout/index',
+		require: '../bower/require/index',
+		underscore: '../bower/underscore/index'
 	}
 })

@@ -11,11 +11,11 @@ require.config({
 		underscore: '../bower/underscore/index'
 	},
 	shim: {
-		jquery: {
-			exports: '$'
-		},
 		cycle: {
 			deps: ['jquery']
+		},
+		jquery: {
+			exports: '$'
 		},
 		underscore: {
 			exports: '_'
@@ -33,4 +33,5 @@ require.config({
 define( function( require ) {
 	require('common/scroll-page-offscreen');
 	require('common/main');
+	require('common/live-reload');
 });

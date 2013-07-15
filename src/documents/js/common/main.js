@@ -1,6 +1,6 @@
 define( function( require ) {
-	var $ = require('jquery'),
-		_ = require('underscore');
+	var $ = require('jquery');
+		// _ = require('underscore');
 
 	// HTML5 BP
 	$('.no-js').removeClass('no-js');

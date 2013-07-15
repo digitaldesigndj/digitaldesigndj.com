@@ -3,6 +3,7 @@ layout: home
 title: Home
 isPage: true
 order: 1
+javascript: koexample
 ---
 
 <p id="broadcast"></p>
