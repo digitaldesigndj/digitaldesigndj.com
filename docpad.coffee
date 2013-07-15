@@ -129,13 +129,13 @@ docpadConfig = {
 			]
 
 			# Services
-			services:
+			# services:
 				# facebookLikeButton:
 				# 	applicationId: '266367676718271'
 				# twitterTweetButton: 'StartupHostel'
 				# twitterFollowButton: 'StartupHostel'
 				# gauges: '51427e6f108d7b293d0000d4'
-				googleAnalytics: 'UA-18710277-1'
+				# googleAnalytics: 'UA-18710277-1'
 
 
 		# -----------------------------

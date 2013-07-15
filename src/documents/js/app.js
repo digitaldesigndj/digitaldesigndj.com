@@ -8,7 +8,7 @@ require.config({
 		jquery: '../bower/jquery/index',
 		knockout: '../bower/knockout/index',
 		require: '../bower/require/index',
-		underscore: '../bower/underscore/index',
+		underscore: '../bower/underscore/index'
 	},
 	shim: {
 		jquery: {
