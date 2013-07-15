@@ -1,7 +1,10 @@
 define( function( require ) {
 	var $ = require('jquery');
 		// _ = require('underscore');
-
+		// Common Modules, Run Everywhere
+	require('scroll-page-offscreen');
+	require('live-reload');
+	console.log( "MAIN" );
 	// HTML5 BP
 	$('.no-js').removeClass('no-js');
 
@@ -21,6 +24,6 @@ define( function( require ) {
 
 	// Analytics
 	window.GoogleAnalyticsObject = 'ga';
-	window.ga = { q: [['create', 'UA-18710277-1', 'jspm.io'], ['send', 'pageview']], l: Date.now() };
+	window.ga = { 'q': [['create', 'UA-18710277-1', 'jspm.io'], ['send', 'pageview']], l: Date.now() };
 	require(['http://www.google-analytics.com/analytics.js']);
 });

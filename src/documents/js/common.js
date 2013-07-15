@@ -2,9 +2,11 @@
 require.config({
 	baseUrl: 'js',
 	paths: {
-		app: 'app',
+		main: 'lib/main',
+		socketio: 'lib/socketio',
+		'live-reload': 'lib/live-reload',
+		'scroll-page-offscreen': 'lib/scroll-page-offscreen',
 		cycle: '../bower/cycle/index',
-		isotope: '../bower/isotope/index',
 		jquery: '../bower/jquery/index',
 		knockout: '../bower/knockout/index',
 		require: '../bower/require/index',
@@ -14,24 +16,18 @@ require.config({
 		cycle: {
 			deps: ['jquery']
 		},
-		jquery: {
-			exports: '$'
+		'scroll-page-offscreen': {
+			deps: ['jquery']
 		},
-		underscore: {
-			exports: '_'
+		main: {
+			deps: ['jquery']
 		},
-		socketio: {
-			exports: 'io'
-		},
-		knockout: {
-			exports: 'ko'
-		}
 	}
 });
 
-// Common Modules, Run Everywhere
 define( function( require ) {
-	require('common/scroll-page-offscreen');
-	require('common/main');
-	require('common/live-reload');
+	require('jquery');
+	require('scroll-page-offscreen');
+	// require('live-reload');
+	require('main');
 });

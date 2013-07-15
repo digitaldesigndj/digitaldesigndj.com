@@ -3,6 +3,7 @@ title: About
 layout: default
 isPage: true
 order: 2
+javascript: common
 ---
 
 This site is hosted on a Raspberry Pi (digitaldesigndj.com), and also on GoDaddy Linux Shared Hosting (taylordyoung.com). 

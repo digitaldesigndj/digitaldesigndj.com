@@ -1,4 +1,6 @@
-define([ 'jquery', 'knockout' ], function( $, ko ) {
+define( function( require ) {
+	require('common');
+	var ko = require('../bower/knockout/index');
 
 	window.formatCurrency = function (value) {
 		return "$" + value.toFixed(2);

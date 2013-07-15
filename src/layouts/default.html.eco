@@ -21,11 +21,11 @@
 </div>
 
 <!-- RequireJS -->
-<script src="js/bower/require/index.js"></script>
-<script>
-	require(['./js/common'], function (common) {
-		require([ '<%= @document.javascript %>' ]);
-	});
-</script>
+<script data-main="js/<%= @document.javascript %>" src="bower/require/index.js"></script>
+// <script>
+// 	require(['./js/common'], function (common) {
+// 		require([ '<%= @document.javascript %>' ]);
+// 	});
+// </script>
 
 <%- @partial( 'foot.html', @ ) %>

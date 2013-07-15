@@ -116,7 +116,7 @@ docpadConfig = {
 			# The website's styles
 			styles: [
 				# 'http://raw.github.com/iamceege/tooltipster/2.1.3/css/tooltipster.css'
-				'/js/bower/pure/index.css'
+				'/bower/pure/index.css'
 				# '/vendor/normalize.css'
 				# '/vendor/h5bp.css'
 				'/css/main.css'
