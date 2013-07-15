@@ -9,7 +9,7 @@ require.config({
 		knockout: '../bower/knockout/index',
 		require: '../bower/require/index',
 		underscore: '../bower/underscore/index',
-		'socket-io': '../bower/socket-io/index'
+		socketio: '../bower/socketio/index'
 	},
 	shim: {
 		jquery: {
@@ -18,13 +18,13 @@ require.config({
 		underscore: {
 			exports: '_'
 		},
-		'socket-io': {
+		socketio: {
 			exports: 'io'
 		},
 		knockout: {
 			exports: 'ko'
 		}
-	},
+	}
 });
 
 // Drop the puck

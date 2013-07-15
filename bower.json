@@ -14,6 +14,6 @@
     "jquery": "http://code.jquery.com/jquery-1.10.2.js",
     "require": "http://requirejs.org/docs/release/2.1.8/comments/require.js",
     "pure": "http://yui.yahooapis.com/pure/0.1.0/pure-min.css",
-    "socket-io":"https://raw.github.com/LearnBoost/socket.io-client/master/socket.io-client.js"
+    "socketio":"https://raw.github.com/LearnBoost/socket.io-client/master/socket.io-client.js"
   }
 }

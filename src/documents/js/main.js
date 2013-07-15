@@ -12,4 +12,7 @@ define([ 'jquery', 'underscore' ], function( $, _ ) {
 		}, animDuration);
 		return false;
 	});
+	window.GoogleAnalyticsObject = 'ga';
+	window.ga = { q: [['create', 'UA-18710277-1', 'jspm.io'], ['send', 'pageview']], l: Date.now() };
+	require(['http://www.google-analytics.com/analytics.js']);
 });

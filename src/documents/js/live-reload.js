@@ -1,4 +1,4 @@
-define([ 'socket-io' ], function ( io ) {
+define([ 'socketio' ], function ( io ) {
 	(function() {
 		/* Did we just livereload? */
 		var log = true && localStorage && console && console.log && true;
