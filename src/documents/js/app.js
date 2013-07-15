@@ -3,19 +3,15 @@ require.config({
 	baseUrl: 'js',
 	paths: {
 		app: 'app',
-		cycle: 'bower/cycle/index',
-		isotope: 'bower/isotope/index',
-		jquery: 'bower/jquery/index',
-		knockout: 'bower/knockout/index',
-		require: 'bower/require/index',
-		underscore: 'bower/underscore/index'
+		cycle: '../bower/cycle/index',
+		isotope: '../bower/isotope/index',
+		jquery: '../bower/jquery/index',
+		knockout: '../bower/knockout/index',
+		require: '../bower/require/index',
+		underscore: '../bower/underscore/index',
+		'socket-io': '../bower/socket-io/index'
 	},
 	shim: {
-		font: {
-			deps: [
-				'propertyParser'
-			]
-		},
 		jquery: {
 			exports: '$'
 		},
@@ -29,21 +25,12 @@ require.config({
 			exports: 'ko'
 		}
 	},
-	hbs: {
-		disableI18n: {
-
-		},
-		disableHelpers: {
-
-		}
-	}
 });
 
 // Drop the puck
 define([
 	'main',
 	'koexample',
-	// 'font!typekit,id:czt2jur',
-	'scroll-page-offscreen' //,
-	// 'live-reload'
+	'scroll-page-offscreen',
+	'live-reload'
 ]);
