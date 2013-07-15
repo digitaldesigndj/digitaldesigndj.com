@@ -9,7 +9,6 @@ require.config({
 		knockout: '../bower/knockout/index',
 		require: '../bower/require/index',
 		underscore: '../bower/underscore/index',
-		socketio: '../bower/socketio/index'
 	},
 	shim: {
 		jquery: {
