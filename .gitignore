@@ -5,3 +5,4 @@ out
 stg
 report
 src/documents/bower
+*.har
